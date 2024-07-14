@@ -45,9 +45,8 @@ export async function BoxRevealDemo() {
         <div>
           <div className="mt-[1.5rem]">
             <TypingAnimation
-              text="A platform for developers to track their projects and collaborate with other developers. Team DevTrack aims to empower citizens and stakeholders with the magical eye of transparency.​
-              A platform for developers to track their projects and collaborate with other developers. Team DevTrack aims to empower citizens and stakeholders with the magical eye of transparency.​
-"
+              text="DevTrack is an innovative web application designed to bridge the communication gap by bringing transparency and accountability to government projects in Kathmandu Metropolitan City ( KMC). It provides comprehensive details on project budgets , quality , schedules , authorities and usage , ensuring the general public has easy access to vital data . This transparency builds trust between the KMC government and its citizens , reducing corruption and mismanagement while promoting a culture of openness .
+ "
               duration={5}
               className="text-[1rem] text-start font-[450] font-[Poppins]"
             />
