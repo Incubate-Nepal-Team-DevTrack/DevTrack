@@ -100,7 +100,7 @@ export function BoxRevealDemo() {
           >
             <Button
               onClick={() => {
-                router.push("/explore");
+                router.push("/screens/mapScreen");
               }}
               style={{
                 backgroundColor: "white",
