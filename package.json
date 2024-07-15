@@ -19,6 +19,7 @@
     "cobe": "^0.6.3",
     "framer-motion": "^11.3.2",
     "lucide-react": "^0.407.0",
+    "mapbox-gl": "^3.5.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",

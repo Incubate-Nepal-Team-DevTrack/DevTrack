@@ -1,9 +1,16 @@
 // import { Button } from "@/components/ui/button";
+
+"use client";
+
 import BoxReveal from "@/components/magicui/box-reveal";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 import { Button } from "@/components/ui/button";
 import TypingAnimation from "@/components/magicui/typing-animation";
-export async function BoxRevealDemo() {
+import { useRouter } from "next/navigation";
+
+export function BoxRevealDemo() {
+  const router = useRouter();
+
   return (
     <div className="h-full w-full max-w-[32rem] items-center justify-center overflow-hidden pt-8">
       <BoxReveal boxColor={"#5046e6"} duration={0.5}>
@@ -92,6 +99,9 @@ export async function BoxRevealDemo() {
             }}
           >
             <Button
+              onClick={() => {
+                router.push("/explore");
+              }}
               style={{
                 backgroundColor: "white",
                 height: 45,
