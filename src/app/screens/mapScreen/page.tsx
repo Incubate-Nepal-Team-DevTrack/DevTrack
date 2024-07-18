@@ -1,7 +1,8 @@
+"use client";
+import GoogleMaps from "@/app/components/mapProvider";
 import NavBar from "@/app/components/navbar/navBar";
 import SideNav from "@/app/components/sideNav";
 import React from "react";
-import mapboxgl from "mapbox-gl";
 
 const MapScreen = () => {
   return (
@@ -14,7 +15,6 @@ const MapScreen = () => {
             height: "100%",
             display: "flex",
             flexDirection: "row",
-            backgroundColor: "red",
           }}
         >
           <div
@@ -29,13 +29,13 @@ const MapScreen = () => {
           <div
             style={{
               flex: 0.85,
+              height: "100vh",
               display: "flex",
 
-              backgroundColor: "blue",
+              // backgroundColor: "blue",
             }}
           >
-            {" "}
-            <h1>Map Screen</h1>
+            <GoogleMaps />
           </div>
         </div>
       </div>
