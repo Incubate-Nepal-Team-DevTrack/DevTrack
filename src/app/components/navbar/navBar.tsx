@@ -49,6 +49,11 @@ export default function NavBar() {
               }}
             >
               <Button
+                onClick={() => {
+                  alert(
+                    "No wonder you are smart. But, it is not available yet."
+                  );
+                }}
                 style={{
                   backgroundColor: "black",
                   height: 40,
@@ -69,6 +74,11 @@ export default function NavBar() {
               }}
             >
               <Button
+                onClick={() => {
+                  alert(
+                    "No wonder you are smart. But, it is not available yet."
+                  );
+                }}
                 style={{
                   backgroundColor: "white",
                   height: 40,
