@@ -35,7 +35,7 @@ const MapScreen = () => {
               // backgroundColor: "blue",
             }}
           >
-            <GoogleMaps />
+            {/* <GoogleMaps /> */}
           </div>
         </div>
       </div>

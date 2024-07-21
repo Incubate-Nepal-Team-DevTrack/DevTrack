@@ -82,8 +82,8 @@ export function BoxRevealDemo() {
             }}
           >
             <AnimatedSubscribeButton
-              initialText={"Subscribe"}
-              changeText={"Subscribed"}
+              initialText={"Join Us"}
+              changeText={"Joined"}
               buttonColor={"black"}
               subscribeStatus={false}
               buttonTextColor={"white"}
@@ -100,7 +100,8 @@ export function BoxRevealDemo() {
           >
             <Button
               onClick={() => {
-                router.push("/screens/mapScreen");
+                alert("Feature not available yet");
+                // router.push("/screens/mapScreen");
               }}
               style={{
                 backgroundColor: "white",
@@ -113,7 +114,7 @@ export function BoxRevealDemo() {
                 fontWeight: "bold",
               }}
             >
-              Explore
+              Start Tracking
             </Button>
           </div>
         </div>
