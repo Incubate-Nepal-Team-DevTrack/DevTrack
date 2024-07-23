@@ -21,6 +21,7 @@ const MapScreen = () => {
           {" "}
           <NavBar />
         </div>
+
         <div
           className="h-full w-ful flex-row"
           style={{

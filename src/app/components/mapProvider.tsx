@@ -34,7 +34,6 @@ export default function GoogleMaps() {
       // add the marker in the map
       const marker = new google.maps.Marker({
         map: map,
-
         position: locationInMap,
       });
     };
