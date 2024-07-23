@@ -88,7 +88,125 @@ const ProjectRevealCardComponent = () => {
           investigated as future supply sources.
         </p>
 
-        <ThreeDCardDemo />
+        <h3
+          style={{
+            marginTop: 20,
+            fontSize: "1rem",
+            zIndex: 100,
+            fontWeight: 600,
+            color: "black",
+            marginBottom: 10,
+          }}
+        >
+          Authorities Involved
+        </h3>
+
+        <div
+          className="justify-center
+        
+        columns-3  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 justify-start"
+        >
+          <div
+            style={{
+              width: 300,
+            }}
+            className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div className="flex justify-end px-4 pt-8"></div>
+            <div className="flex flex-col items-center pb-10">
+              <img
+                className="w-16 h-16 mb-3 rounded-full shadow-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTigrynhD-SE5VcrJXysd0ckkeL1u3WRRmwA&s"
+                alt="Bonnie image"
+              />
+              <h5 className="mb-1 text-2 font-medium text-gray-900 dark:text-white">
+                Minsitry Of Roads and Transport{" "}
+              </h5>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Federal Government
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Executive Body
+              </span>
+              <div className="flex mt-4 md:mt-6">
+                <a
+                  style={{
+                    width: 100,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                  href="#"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Website
+                </a>
+                <a
+                  style={{
+                    width: 100,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                  href="#"
+                  className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Email
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              width: 300,
+            }}
+            className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div className="flex justify-end px-4 pt-8"></div>
+            <div className="flex flex-col items-center pb-10">
+              <img
+                className="w-16 h-16 mb-3 rounded-full shadow-lg"
+                src="https://avatars.githubusercontent.com/u/77845329?v=4"
+                alt="Bonnie image"
+              />
+              <h5 className="mb-1 text-2 font-medium text-gray-900 dark:text-white">
+                Sushil Bhattarai{" "}
+              </h5>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Bhattarai Constructions
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                Contractor
+              </span>
+              <div style={{}} className="flex mt-4 md:mt-6">
+                <a
+                  href="#"
+                  style={{
+                    width: 100,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Phone
+                </a>
+                <a
+                  style={{
+                    width: 100,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                  href="#"
+                  className="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* <CardHoverEffect /> */}
       </div>
     </div>
