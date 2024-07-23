@@ -9,21 +9,18 @@ export default function GoogleMaps() {
   useEffect(() => {
     const initializeMap = async () => {
       const loader = new Loader({
-        apiKey: "",
-        version: "quartely",
+        apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
+        version: "weekly",
       });
 
       const { Map } = await loader.importLibrary("maps");
 
       const locationInMap = {
-        lat: 39.60128890889341,
-        lng: -9.069839810859907,
+        lat: 27.7172,
+        lng: 85.324,
       };
 
       // MARKER
-      const { Marker } = (await loader.importLibrary(
-        "marker"
-      )) as google.maps.MarkerLibrary;
 
       const options: google.maps.MapOptions = {
         center: locationInMap,
@@ -35,7 +32,7 @@ export default function GoogleMaps() {
       const map = new Map(mapRef.current as HTMLDivElement, options);
 
       // add the marker in the map
-      const marker = new Marker({
+      const marker = new google.maps.Marker({
         map: map,
 
         position: locationInMap,
@@ -45,5 +42,5 @@ export default function GoogleMaps() {
     initializeMap();
   }, []);
 
-  return <div className="h-[600px]" ref={mapRef} />;
+  return <div className="h-full w-full" ref={mapRef} />;
 }
