@@ -100,8 +100,8 @@ export function BoxRevealComponent() {
           >
             <Button
               onClick={() => {
-                alert("Feature not available yet");
-                // router.push("/screens/mapScreen");
+                // alert("Feature not available yet");
+                router.push("/screens/mapScreen");
               }}
               style={{
                 backgroundColor: "white",
