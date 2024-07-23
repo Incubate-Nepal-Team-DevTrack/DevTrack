@@ -2,9 +2,9 @@ import Image from "next/image";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import NavBar from "./components/navbar/navBar";
 import BoxReveal from "@/components/magicui/box-reveal";
-import { BoxRevealDemo } from "./components/boxReveal/boxReveal";
+import { BoxRevealComponent } from "./components/boxReveal/boxReveal";
 import { Globe } from "@/components/ui/globe";
-import { GlobeDemo } from "./components/globe/globe";
+import { GlobeComponent } from "./components/globe/globe";
 import GridPattern from "@/components/magicui/animated-grid-pattern";
 import RetroGrid from "@/components/magicui/retro-grid";
 export default function Home() {
@@ -89,7 +89,7 @@ export default function Home() {
             }}
           >
             {" "}
-            <BoxRevealDemo />
+            <BoxRevealComponent />
           </div>
           <div
             style={{
@@ -97,7 +97,7 @@ export default function Home() {
               justifyContent: "flex-end",
             }}
           >
-            <GlobeDemo />
+            <GlobeComponent />
           </div>
         </div>
       </div>

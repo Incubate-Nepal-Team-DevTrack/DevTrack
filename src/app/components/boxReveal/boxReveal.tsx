@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import { useRouter } from "next/navigation";
 
-export function BoxRevealDemo() {
+export function BoxRevealComponent() {
   const router = useRouter();
 
   return (
