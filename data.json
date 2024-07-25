@@ -1,0 +1,109 @@
+{
+  "project_name": "My Project",
+  "project_horizontal_iamge": "https://www.example.com/image.jpg",
+  "project_ward": "Ward 1",
+  "project_short_description": "This is a short project description",
+  "project_description": "This is a project description",
+  "project_contractor": "John Doe",
+  "project_location": "New York",
+  "project_start_date": "2020-01-01",
+  "project_end_date": "2020-12-31",
+  "project_budget": "xyz Kharba",
+  "extnded_count": 2,
+  "project_extended:": [
+    {
+      "name": "xyz",
+      "new_completion_date": "2020-12-31",
+      "extended_date": "2021-12-31",
+      "amount_extended": "xyz Kharba",
+      "new_contractor": "John Doe"
+    },
+    {
+      "name": "xyz",
+      "new_completion_date": "2020-12-31",
+      "extended_date": "2021-12-31",
+      "amount_extended": "xyz Kharba",
+      "new_contractor": "John Doe"
+    }
+  ],
+  "project_currency": "USD",
+  "project_status": "In Progress",
+  "project_authority": "KMC",
+  "project_manager": "Jane Doe",
+  "project_type": "Road",
+  "project_coordinate": {
+    "latitude": 27.7172,
+    "longitude": 85.324
+  },
+  "project_road": {
+    "coords": {
+      "starting_coordinate": {
+        "latitude": 27.7172,
+        "longitude": 85.324
+      },
+      "ending_coordinate": {
+        "latitude": 27.7172,
+        "longitude": 85.324
+      }
+    },
+    "road_start_location": "Kathmandu",
+    "road_end_location": "Bhaktapur",
+    "road_length": "10 km",
+    "road_width": "10 m",
+    "road_type": "Asphalt",
+    "road_traffic": "High",
+    "road_condition": "Good"
+  },
+  "project_socials": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://www.twitter.com"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com"
+    },
+    {
+      "name": "Wesbite",
+      "url": "https://www.wesbite.com"
+    }
+  ],
+  "project_images": [
+    {
+      "imageurl": "https://www.example.com/image.jpg"
+    },
+    {
+      "imageurl": "https://www.example.com/image.jpg"
+    }
+  ],
+  "project_team": [
+    {
+      "name": "Kathmandu Metropolitan City",
+      "role": "Project Authority",
+      "email": "",
+      "phone": "",
+      "imageurl": "https://www.example.com/image.jpg"
+    },
+    {
+      "name": "Jane Doe",
+      "role": "Project Manager",
+      "email": "",
+      "phone": "",
+
+      "imageurl": "https://www.example.com/image.jpg"
+    },
+    {
+      "name": "John Smith",
+      "role": "Developer",
+      "email": "",
+      "phone": "",
+
+      "imageurl": "https://www.example.com/image.jpg"
+    }
+  ],
+  "project_totalloabours": 10
+}

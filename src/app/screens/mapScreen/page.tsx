@@ -29,9 +29,9 @@ const MapScreen = () => {
               // backgroundColor: "blue",
             }}
           >
-            {/* <ProjectRevealCardComponent /> */}
+            <ProjectRevealCardComponent />
 
-            <GoogleMaps />
+            {/* <GoogleMaps /> */}
           </div>
         </div>
       </div>
