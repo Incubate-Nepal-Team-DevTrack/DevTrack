@@ -1,9 +1,26 @@
 "use client";
 
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, lazy } from "react";
 import { Input } from "@/components/ui/input";
-// AIzaSyBXr9t0F7gkAedIJLC2pIn_sae1iGSDLmM
+import { Select, SelectItem } from "@nextui-org/select";
+import { Button } from "@nextui-org/button";
+import AutoModeIcon from "@mui/icons-material/AutoMode";
+import FilterAltSharpIcon from "@mui/icons-material/FilterAltSharp";
+import FilterListSharpIcon from "@mui/icons-material/FilterListSharp";
+import LocationOnSharpIcon from "@mui/icons-material/LocationOnSharp";
+import CorporateFareSharpIcon from "@mui/icons-material/CorporateFareSharp";
+import DateRangeSharpIcon from "@mui/icons-material/DateRangeSharp";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  useDisclosure,
+  ModalFooter,
+} from "@nextui-org/modal";
 const SideNav = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   const initialData = {
     projects: [
       {
@@ -75,6 +92,170 @@ const SideNav = () => {
       projects: data,
     });
   }
+  const wards = [
+    {
+      key: "1",
+      label: "Ward 1",
+    },
+    {
+      key: "2",
+      label: "Ward 2",
+    },
+    {
+      key: "3",
+      label: "Ward 3",
+    },
+    {
+      key: "4",
+      label: "Ward 4",
+    },
+    {
+      key: "5",
+      label: "Ward 5",
+    },
+    {
+      key: "6",
+      label: "Ward 6",
+    },
+    {
+      key: "7",
+      label: "Ward 7",
+    },
+    {
+      key: "8",
+      label: "Ward 8",
+    },
+    {
+      key: "9",
+      label: "Ward 9",
+    },
+    {
+      key: "10",
+      label: "Ward 10",
+    },
+    {
+      key: "11",
+      label: "Ward 11",
+    },
+    {
+      key: "12",
+      label: "Ward 12",
+    },
+    {
+      key: "13",
+      label: "Ward 13",
+    },
+    {
+      key: "14",
+      label: "Ward 14",
+    },
+    {
+      key: "15",
+      label: "Ward 15",
+    },
+    {
+      key: "16",
+      label: "Ward 16",
+    },
+    {
+      key: "17",
+      label: "Ward 17",
+    },
+    {
+      key: "18",
+      label: "Ward 18",
+    },
+    {
+      key: "19",
+      label: "Ward 19",
+    },
+    {
+      key: "20",
+      label: "Ward 20",
+    },
+    {
+      key: "21",
+      label: "Ward 21",
+    },
+    {
+      key: "22",
+      label: "Ward 22",
+    },
+    {
+      key: "23",
+      label: "Ward 23",
+    },
+    {
+      key: "24",
+      label: "Ward 24",
+    },
+    {
+      key: "25",
+      label: "Ward 25",
+    },
+    {
+      key: "26",
+      label: "Ward 26",
+    },
+    {
+      key: "27",
+      label: "Ward 27",
+    },
+    {
+      key: "28",
+      label: "Ward 28",
+    },
+    {
+      key: "29",
+      label: "Ward 29",
+    },
+    {
+      key: "30",
+      label: "Ward 30",
+    },
+    {
+      key: "31",
+      label: "Ward 31",
+    },
+    {
+      key: "32",
+      label: "Ward 32",
+    },
+  ];
+  const project_types = [
+    {
+      key: "Road",
+      label: "Road",
+    },
+    {
+      key: "Bridge",
+      label: "Bridge",
+    },
+    {
+      key: "Building",
+      label: "Building",
+    },
+    {
+      key: "Drainage",
+      label: "Drainage",
+    },
+    {
+      key: "Water Supply",
+      label: "Water Supply",
+    },
+    {
+      key: "Sewerage",
+      label: "Sewerage",
+    },
+    {
+      key: "Electricity",
+      label: "Electricity",
+    },
+    {
+      key: "Others",
+      label: "Others",
+    },
+  ];
   return (
     <aside
       style={{
@@ -88,8 +269,7 @@ const SideNav = () => {
           style={{
             position: "fixed",
             width: 300,
-            height: 50,
-            zIndex: 1,
+            zIndex: 5,
           }}
         >
           <Input
@@ -102,10 +282,134 @@ const SideNav = () => {
             }}
           />
         </div>
+        <div
+          style={{
+            zIndex: 1,
+            width: "300px",
+            height: 50,
+            marginTop: 45,
+            position: "fixed",
+            backgroundColor: "white",
+
+            display: "flex",
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+            }}
+            className="flex flex-row justify-between"
+          >
+            <Button
+              style={{
+                alignSelf: "flex-end",
+                right: 0,
+                fontSize: 14,
+                position: "absolute",
+                backgroundColor: "white",
+                color: "grey",
+                borderColor: "black",
+              }}
+              onPress={onOpen}
+            >
+              <FilterListSharpIcon
+                style={{
+                  height: 16,
+                  width: 16,
+                  color: "grey",
+                }}
+              />
+              Filter
+            </Button>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-col gap-1 ">
+                      Selct the Desired Filter
+                    </ModalHeader>
+                    <ModalBody>
+                      <Select
+                        typeof="text"
+                        style={{
+                          flex: 0.4,
+                          borderRadius: 5,
+                          borderWidth: 1,
+                          borderColor: "black",
+                          zIndex: 1,
+                          backgroundColor: "white",
+                          color: "black",
+                        }}
+                        isRequired
+                        label="Ward"
+                        placeholder="Select a ward"
+                        defaultSelectedKeys={[""]}
+                      >
+                        {wards.map((ward) => (
+                          <SelectItem
+                            style={{
+                              backgroundColor: "white",
+                              color: "black",
+                              padding: 4,
+                            }}
+                            key={ward.key}
+                          >
+                            {ward.label}
+                          </SelectItem>
+                        ))}
+                      </Select>
+
+                      <Select
+                        typeof="text"
+                        style={{
+                          height: 30,
+                          flex: 0.4,
+                          marginTop: 10,
+                          borderRadius: 5,
+                          borderWidth: 1,
+                          borderColor: "black",
+                          zIndex: 1,
+                          fontSize: 12,
+                          backgroundColor: "white",
+                          color: "black",
+                        }}
+                        isRequired
+                        label="Type"
+                        placeholder="Project Type"
+                        defaultSelectedKeys={[""]}
+                      >
+                        {project_types.map((type) => (
+                          <SelectItem
+                            style={{
+                              backgroundColor: "white",
+                              color: "black",
+                              padding: 4,
+                            }}
+                            key={type.key}
+                          >
+                            {type.label}
+                          </SelectItem>
+                        ))}
+                      </Select>
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Close
+                      </Button>
+                      <Button color="primary" onPress={onClose}>
+                        Set Filter
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>{" "}
+          </div>
+        </div>
         <ul
           className="space-y-2 font-medium pt-2  "
           style={{
-            marginTop: 50,
+            marginTop: 100,
           }}
         >
           {duplicateDta.projects.length !== 0 ? (
@@ -135,6 +439,10 @@ const SideNav = () => {
                         alignItems: "center",
                       }}
                     >
+                      {/* <AutoModeIcon /> */}
+                      {/* <AutoModeIcon
+                        style={{ color: project.color, height: 20, width: 20 }}
+                      /> */}
                       <h5
                         style={{
                           flex: 0.9,
@@ -176,6 +484,14 @@ const SideNav = () => {
                           marginRight: "10px",
                         }}
                       >
+                        {/* <DateRangeSharpIcon
+                          style={{
+                            height: 15,
+                            width: 15,
+                            color: "blue",
+                            marginRight: 5,
+                          }}
+                        /> */}
                         {project.date}
                       </span>
                       <span
@@ -203,6 +519,14 @@ const SideNav = () => {
                           marginRight: "10px",
                         }}
                       >
+                        <CorporateFareSharpIcon
+                          style={{
+                            height: 15,
+                            width: 15,
+                            color: "blue",
+                            marginRight: 5,
+                          }}
+                        />
                         {project.contractor}
                       </span>
                       <span
@@ -212,6 +536,14 @@ const SideNav = () => {
                           marginRight: "10px",
                         }}
                       >
+                        <LocationOnSharpIcon
+                          style={{
+                            height: 15,
+                            width: 15,
+                            color: "blue",
+                            marginRight: 5,
+                          }}
+                        />
                         {project.location}
                       </span>
                     </div>

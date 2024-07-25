@@ -44,7 +44,9 @@ const MapScreen = () => {
               flex: 0.76,
               marginLeft: 10,
               marginTop: 80,
-              height: "100vh",
+              height: "100%",
+              position: "fixed",
+
               display: "flex",
 
               // backgroundColor: "blue",

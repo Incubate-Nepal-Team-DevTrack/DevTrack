@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Select, SelectSection, SelectItem } from "@nextui-org/select";
 export default function NavBar() {
   return (
     <nav className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700">
