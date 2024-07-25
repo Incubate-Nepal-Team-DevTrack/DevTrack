@@ -9,7 +9,8 @@ import Layout from "./layout";
 import { useContext, useState } from "react";
 import AppContext from "@/app/context/Context";
 const MapScreen = () => {
-  let { count, setCount } = useContext(AppContext);
+  let { count, setCount, selectedOption, setSelectedOption } =
+    useContext(AppContext);
   return (
     <div className="h-full w-full flex">
       <div className="h-full w-full flex flex-col">
@@ -29,9 +30,11 @@ const MapScreen = () => {
               // backgroundColor: "blue",
             }}
           >
-            {/* <ProjectRevealCardComponent /> */}
-
-            <GoogleMaps />
+            {selectedOption === "map" ? (
+              <GoogleMaps />
+            ) : (
+              <ProjectRevealCardComponent />
+            )}
           </div>
         </div>
       </div>

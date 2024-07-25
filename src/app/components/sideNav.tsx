@@ -20,9 +20,17 @@ import {
 } from "@nextui-org/modal";
 import project_types from "./dataComponents/projectTypes";
 import wards from "./dataComponents/wards";
+import AppContext from "../context/Context";
 const SideNav = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+  const {
+    filter,
+    setFilter,
+    count,
+    setCount,
+    selectedOption,
+    setSelectedOption,
+  } = useContext(AppContext);
   const initialData = {
     projects: [
       {
@@ -219,6 +227,9 @@ const SideNav = () => {
                       >
                         {project_types.map((type) => (
                           <SelectItem
+                            onSelect={(e) => {
+                              console.log(e);
+                            }}
                             style={{
                               backgroundColor: "white",
                               color: "black",
