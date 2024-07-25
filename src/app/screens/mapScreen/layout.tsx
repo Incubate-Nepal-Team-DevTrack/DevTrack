@@ -7,7 +7,13 @@ import { ContextProvider } from "@/app/context/Context";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ContextProvider>
-      <main>
+      <main
+        style={{
+          flex: 1,
+          width: "100%",
+          justifyContent: "center",
+        }}
+      >
         <div
           style={{
             position: "fixed",
@@ -20,12 +26,37 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
         <div
           style={{
-            flex: 0.22,
+            flex: 1,
+            width: "100%",
+            flexDirection: "row",
+            display: "flex",
+            height: "100%",
           }}
         >
-          <SideNav />
+          <div
+            style={{
+              display: "flex",
+              flex: 0.22,
+              backgroundColor: "#f9f9f9",
+              height: "100%",
+            }}
+          >
+            <SideNav />
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              flex: 0.78,
+              backgroundColor: "#f9f9f9",
+
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {children}
+          </div>
         </div>
-        <main>{children}</main>
       </main>
     </ContextProvider>
   );

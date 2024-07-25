@@ -11,38 +11,31 @@ import AppContext from "@/app/context/Context";
 const MapScreen = () => {
   let { count, setCount } = useContext(AppContext);
   return (
-    <Layout>
-      <div className="h-full w-full flex">
-        <div className="h-full w-full flex flex-col">
+    <div className="h-full w-full flex">
+      <div className="h-full w-full flex flex-col">
+        <div
+          className="h-full w-ful flex-row"
+          style={{
+            height: "100%",
+          }}
+        >
           <div
-            className="h-full w-ful flex-row"
             style={{
-              height: "100%",
+              marginTop: 80,
+              height: "90vh",
+
               display: "flex",
-              flexDirection: "row",
+
+              // backgroundColor: "blue",
             }}
           >
-            <div
-              style={{
-                flex: 0.76,
-                marginLeft: 10,
-                marginTop: 80,
-                height: "90vh",
-                width: "100vw",
+            {/* <ProjectRevealCardComponent /> */}
 
-                display: "flex",
-
-                // backgroundColor: "blue",
-              }}
-            >
-              {/* <ProjectRevealCardComponent /> */}
-
-              <GoogleMaps />
-            </div>
+            <GoogleMaps />
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
