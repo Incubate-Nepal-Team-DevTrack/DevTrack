@@ -173,7 +173,7 @@ const SideNav = () => {
                 {(onClose) => (
                   <>
                     <ModalHeader className="flex flex-col gap-1 ">
-                      Selct the Desired Filter
+                      Select the Desired Filter
                     </ModalHeader>
                     <ModalBody>
                       <Select
