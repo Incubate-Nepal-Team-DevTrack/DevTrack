@@ -1,12 +1,15 @@
 "use client";
 
 import React, { Component } from "react";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
 import AppContext from "@/app/context/Context";
 export default function NavBar() {
+  let url = usePathname();
   const { count, setCount, selectedOption, setSelectedOption } =
     React.useContext(AppContext);
   console.log(count);
@@ -47,13 +50,13 @@ export default function NavBar() {
             style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
               alignContent: "center",
               flexDirection: "row",
             }}
           >
             <div
               style={{
+                flex: 0.5,
                 marginTop: 10,
               }}
             >
@@ -77,12 +80,13 @@ export default function NavBar() {
             </div>
             <div
               style={{
+                flex: 0.5,
                 marginTop: 10,
               }}
             >
               <Button
                 onClick={() => {
-                  alert("No wonder you are smart, but it is not available.");
+                  alert("You are definitely jealous.");
                 }}
                 style={{
                   backgroundColor: "white",
@@ -98,45 +102,47 @@ export default function NavBar() {
                 GitHub
               </Button>
             </div>
-            <div
-              style={{
-                marginTop: 10,
-              }}
-            >
-              <Button
+            {url === "/screens/mapScreen" ? (
+              <div
                 style={{
-                  backgroundColor: "white",
-                  height: 40,
-                  width: 140,
-                  color: "black",
-                  marginLeft: 10,
-                  // borderColor: "black",
-                  // borderWidth: 1,
-                  fontWeight: "bold",
+                  marginTop: 10,
                 }}
               >
-                <label className="inline-flex items-center cursor-pointer justify-center">
-                  <input
-                    onChange={() => {
-                      if (selected === "detail") {
-                        setSelected("map");
-                        handleSelectChange("map");
-                      } else {
-                        setSelected("detail");
-                        handleSelectChange("detail");
-                      }
-                    }}
-                    type="checkbox"
-                    value=""
-                    className="sr-only peer"
-                  />
-                  <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                  <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                    Map
-                  </span>
-                </label>
-              </Button>
-            </div>
+                <Button
+                  style={{
+                    backgroundColor: "white",
+                    height: 40,
+                    width: 140,
+                    color: "black",
+                    marginLeft: 10,
+                    // borderColor: "black",
+                    // borderWidth: 1,
+                    fontWeight: "bold",
+                  }}
+                >
+                  <label className="inline-flex items-center cursor-pointer justify-center">
+                    <input
+                      onChange={() => {
+                        if (selected === "detail") {
+                          setSelected("map");
+                          handleSelectChange("map");
+                        } else {
+                          setSelected("detail");
+                          handleSelectChange("detail");
+                        }
+                      }}
+                      type="checkbox"
+                      value=""
+                      className="sr-only peer"
+                    />
+                    <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                      Map
+                    </span>
+                  </label>
+                </Button>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

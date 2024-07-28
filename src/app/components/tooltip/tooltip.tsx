@@ -4,43 +4,49 @@ import { AnimatedTooltip } from "../../../components/ui/tooltip";
 const people = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
-    image:
-      "https://www.melamchiwater.gov.np/wp-content/themes/composer/images/inner-bnr.jpg",
+    name: "Sushil Bhattarai",
+    designation: "Main Contractor",
+    image: "https://avatars.githubusercontent.com/u/77845329?v=4",
   },
   {
     id: 2,
-    name: "Robert Johnson",
-    designation: "Product Manager",
+    name: "Subham Jha",
+    designation: "Labour Union Head",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "https://media.licdn.com/dms/image/D4E03AQE8lqR0ch05Pg/profile-displayphoto-shrink_200_200/0/1706904162743?e=2147483647&v=beta&t=U_f8Uo4nj5Qrn_l5i2mmPsWnVSgl6PeNmSYLEkWkr30",
   },
   {
     id: 3,
-    name: "Jane Smith",
-    designation: "Data Scientist",
+    name: "Preeti Pantha",
+    designation: "Feasibility Head",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "https://glocalteenhero.com/wp-content/uploads/2023/08/Preeti-Pantha-scaled-e1692253109530.jpeg",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "UX Designer",
+    name: "Sampada Koirala",
+    designation: "Labour",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzAkFl8NMIpdM0Jb6gl1K_QeVVQ_n4Ii-vYQ&s",
   },
   {
     id: 5,
-    name: "Tyler Durden",
-    designation: "Soap Developer",
+    name: "Tushar Shah",
+    designation: "Labour",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
   },
   {
     id: 6,
-    name: "Dora",
-    designation: "The Explorer",
+    name: "Sugam Parajuli",
+    designation: "Labour",
+    image:
+      "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+  },
+  {
+    id: 8,
+    name: "Prashim Timilsina",
+    designation: "Labour",
     image:
       "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
   },
