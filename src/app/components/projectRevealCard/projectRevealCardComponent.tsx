@@ -1,7 +1,7 @@
 import React from "react";
 import { CardHoverEffect } from "../card/card";
 import { AnimatedTooltipPreview } from "../tooltip/tooltip";
-import { ThreeDCardDemo } from "./peopleCards";
+import { PeopleCard } from "./peopleCards";
 
 const ProjectRevealCardComponent = () => {
   return (
