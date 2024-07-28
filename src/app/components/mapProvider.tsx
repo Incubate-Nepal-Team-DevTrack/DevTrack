@@ -16,8 +16,8 @@ export default function GoogleMaps() {
       const { Map } = await loader.importLibrary("maps");
 
       const locationInMap = {
-        lat: 27.7172,
-        lng: 85.324,
+        lat: 27.694418231531728,
+        lng: 85.32734418301817,
       };
 
       // MARKER
