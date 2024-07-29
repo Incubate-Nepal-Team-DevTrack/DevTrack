@@ -44,7 +44,7 @@ export function BoxRevealComponent() {
         font-[Poppins]
         "
         >
-          A Tracker for <span className="text-[#5046e6]">Eveyone</span>
+          A Tracker for <span className="text-[#5046e6]">Everyone</span>
         </h2>
       </BoxReveal>
 

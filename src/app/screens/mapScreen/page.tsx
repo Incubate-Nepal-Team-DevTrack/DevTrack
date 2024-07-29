@@ -8,6 +8,7 @@ import Layout from "./layout";
 
 import { useContext, useState } from "react";
 import AppContext from "@/app/context/Context";
+import ProjectInfoCollapsible from "@/app/components/projectInfoCollapsible/projectInfoCollapsible";
 const MapScreen = () => {
   let { count, setCount, selectedOption, setSelectedOption } =
     useContext(AppContext);
@@ -31,7 +32,33 @@ const MapScreen = () => {
             }}
           >
             {selectedOption === "map" ? (
-              <GoogleMaps />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <GoogleMaps />
+                <div
+                  style={{
+                    position: "fixed",
+                    flex: 1,
+                    right: 0,
+                    backgroundColor: "white",
+                    display: "flex",
+                    // width: "100%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderTop: "1px solid #eaeaea",
+                    alignContent: "center",
+                    zIndex: 13330,
+                  }}
+                >
+                  <ProjectInfoCollapsible />
+                </div>
+              </div>
             ) : (
               <ProjectRevealCardComponent />
             )}

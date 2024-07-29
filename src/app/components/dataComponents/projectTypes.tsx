@@ -20,8 +20,8 @@ const project_types = [
     label: "Water Supply",
   },
   {
-    key: "Sewerage",
-    label: "Sewerage",
+    key: "Seweage",
+    label: "Seweage",
   },
   {
     key: "Electricity",
