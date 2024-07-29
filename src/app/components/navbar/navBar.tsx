@@ -16,6 +16,7 @@ export default function NavBar() {
   const [selected, setSelected] = React.useState<string | null>("detail");
   async function handleSelectChange(value: string) {
     setSelectedOption(value);
+    console.log(value);
   }
   return (
     <nav className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700">
