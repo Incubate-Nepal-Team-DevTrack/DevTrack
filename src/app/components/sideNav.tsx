@@ -21,6 +21,7 @@ import {
 import project_types from "./dataComponents/projectTypes";
 import wards from "./dataComponents/wards";
 import AppContext from "../context/Context";
+import ProjectData from "../../../data.json";
 const SideNav = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const {
@@ -30,77 +31,20 @@ const SideNav = () => {
     setCount,
     selectedOption,
     setSelectedOption,
+    setSelectedProject,
+    selectedProject,
   } = useContext(AppContext);
-  const initialData = {
-    projects: [
-      {
-        name: "Melamchi Water Project",
-        date: "1st June 2021",
-        status: "On Progress",
-        contractor: "Pappu Construction",
-        location: "Kathmandu Valley",
-        color: "#1EA362",
 
-        abandoned: false,
-      },
-      {
-        name: "Gautam Buddha Intl Stadium",
-        date: "1st June 2021",
-        status: "Abandoned",
-        contractor: "Pappu Construction",
-        location: "Bharatpur, Chitwan",
-        color: "red",
-        abandoned: true,
-      },
-      {
-        name: "Gautam Buddha Intl Stadium",
-        date: "1st June 2021",
-        status: "Abandoned",
-        contractor: "Pappu Construction",
-        location: "Bharatpur, Chitwan",
-        color: "red",
-        abandoned: true,
-      },
-      {
-        name: "Gautam Buddha Intl Stadium",
-        date: "1st June 2021",
-        status: "Abandoned",
-        contractor: "Pappu Construction",
-        location: "Bharatpur, Chitwan",
-        color: "red",
-        abandoned: true,
-      },
-      {
-        name: "Gautam Buddha Intl Stadium",
-        date: "1st June 2021",
-        status: "Abandoned",
-        contractor: "Pappu Construction",
-        location: "Bharatpur, Chitwan",
-        color: "red",
-        abandoned: true,
-      },
-      {
-        name: "Gautam Buddha Intl Stadium",
-        date: "1st June 2021",
-        status: "Abandoned",
-        contractor: "Pappu Construction",
-        location: "Bharatpur, Chitwan",
-        color: "red",
-        abandoned: true,
-      },
-    ],
-  };
-  const [selectedProject, setSelectedProject] = useState<string>("");
+  const initialData = ProjectData;
   const [duplicateDta, setDuplicateData] = useState(initialData);
-
+  const [localSelectedProject, setLocalSelectedProject] =
+    useState(selectedProject);
   async function Search(value: string) {
     console.log(value);
-    const data = initialData.projects.filter((project) =>
-      project.name.toLowerCase().includes(value.toLowerCase())
+    const data = initialData.filter((project) =>
+      project.project_name.toLowerCase().includes(value.toLowerCase())
     );
-    setDuplicateData({
-      projects: data,
-    });
+    setDuplicateData(data);
   }
 
   return (
@@ -262,10 +206,13 @@ const SideNav = () => {
             marginTop: 100,
           }}
         >
-          {duplicateDta.projects.length !== 0 ? (
-            duplicateDta.projects.map((project) => (
+          {duplicateDta.length !== 0 ? (
+            duplicateDta.map((project) => (
               <li
-                onClick={() => setSelectedProject(project.name)}
+                onClick={() => {
+                  setLocalSelectedProject(project.project_name);
+                  setSelectedProject(project);
+                }}
                 style={{
                   width: 300,
                 }}
@@ -274,9 +221,12 @@ const SideNav = () => {
                   style={{
                     // backgroundColor:
                     //   selectedProject === project.name ? "#603CC7" : "white",
-                    borderWidth: selectedProject === project.name ? 2 : 0,
+                    borderWidth:
+                      localSelectedProject === project.project_name ? 2 : 0,
                     borderColor:
-                      selectedProject === project.name ? "#603CC7" : "",
+                      localSelectedProject === project.project_name
+                        ? "#603CC7"
+                        : "",
                     borderStyle: "dashed",
                   }}
                   className="max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
@@ -293,14 +243,16 @@ const SideNav = () => {
                       {/* <AutoModeIcon
                         style={{ color: project.color, height: 20, width: 20 }}
                       /> */}
-                      <h5
+                      <h3
                         style={{
                           flex: 0.9,
+                          fontSize: 14,
+                          fontWeight: "bold",
                         }}
-                        className="mb-0 text1xl font-bold tracking-tight text-gray-900 dark:text-white"
+                        className="mb-0  tracking-tight text-gray-900 dark:text-white"
                       >
-                        {project.name}
-                      </h5>
+                        {project.project_name}
+                      </h3>
                       <div
                         style={{
                           flex: 0.1,
@@ -312,9 +264,10 @@ const SideNav = () => {
                             height: 15,
                             width: 15,
                             borderRadius: 10,
-                            backgroundColor: project.abandoned
-                              ? "red"
-                              : "#1EA362",
+                            backgroundColor:
+                              project.project_status === "Abandoned"
+                                ? "red"
+                                : "#1EA362",
                           }}
                         ></div>
                       </div>
@@ -342,7 +295,7 @@ const SideNav = () => {
                             marginRight: 5,
                           }}
                         /> */}
-                        {project.date}
+                        {project.project_start_date}
                       </span>
                       <span
                         style={{
@@ -351,7 +304,7 @@ const SideNav = () => {
                           marginRight: "10px",
                         }}
                       >
-                        {project.status}
+                        {project.project_status}
                       </span>
                     </div>
                     <div
@@ -377,7 +330,7 @@ const SideNav = () => {
                             marginRight: 5,
                           }}
                         />
-                        {project.contractor}
+                        {project.project_contractor}
                       </span>
                       <span
                         style={{
@@ -394,7 +347,7 @@ const SideNav = () => {
                             marginRight: 5,
                           }}
                         />
-                        {project.location}
+                        {project.project_location}
                       </span>
                     </div>
                   </div>

@@ -1,109 +1,202 @@
-{
-  "project_name": "My Project",
-  "project_horizontal_iamge": "https://www.example.com/image.jpg",
-  "project_ward": "Ward 1",
-  "project_short_description": "This is a short project description",
-  "project_description": "This is a project description",
-  "project_contractor": "John Doe",
-  "project_location": "New York",
-  "project_start_date": "2020-01-01",
-  "project_end_date": "2020-12-31",
-  "project_budget": "xyz Kharba",
-  "extnded_count": 2,
-  "project_extended:": [
-    {
-      "name": "xyz",
-      "new_completion_date": "2020-12-31",
-      "extended_date": "2021-12-31",
-      "amount_extended": "xyz Kharba",
-      "new_contractor": "John Doe"
-    },
-    {
-      "name": "xyz",
-      "new_completion_date": "2020-12-31",
-      "extended_date": "2021-12-31",
-      "amount_extended": "xyz Kharba",
-      "new_contractor": "John Doe"
-    }
-  ],
-  "project_currency": "USD",
-  "project_status": "In Progress",
-  "project_authority": "KMC",
-  "project_manager": "Jane Doe",
-  "project_type": "Road",
-  "project_coordinate": {
-    "latitude": 27.7172,
-    "longitude": 85.324
-  },
-  "project_road": {
-    "coords": {
-      "starting_coordinate": {
-        "latitude": 27.7172,
-        "longitude": 85.324
+[
+  {
+    "project_name": "Bus Rapid Transit (BRT) on Ring road of Kathmandu",
+    "project_horizontal_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaicNbCJkf70H24nDw5u6NlBgHObYj9OMMDQ&s",
+    "project_ward": "Ward 3",
+    "project_short_description": "This is a Zero-Emission Urban transport project.",
+    "project_description": "The Bus Rapid Transit (BRT) project on the Ring Road of Kathmandu is a significant public transportation initiative aimed at modernizing and improving the efficiency of the city's transit system. Spanning 27.3 kilometers around the Kathmandu Valley, this project will establish a dedicated bus lane designed to alleviate the heavy traffic congestion that plagues the city. The primary goal is to provide a reliable, efficient, and eco-friendly mode of transportation for the residents of Kathmandu, enhancing the overall public transport infrastructure.\n\nThe BRT project is being implemented under the Build-Operate-Transfer (BOT) model, which involves private sector participation in the development, operation, management, and maintenance of the system. The introduction of electric buses is a key component of the project, aligning with broader environmental goals to reduce air pollution and promote sustainable urban mobility. The system will feature modern facilities, including state-of-the-art bus stops and an efficient ticketing system, ensuring a smooth and convenient experience for passengers.\n\nThis project is not just about deploying electric vehicles on existing roads; it also includes significant improvements to the current road infrastructure to accommodate the dedicated bus lanes. This will ensure that the BRT buses can operate without interference from other vehicular traffic, significantly reducing travel times and improving punctuality. The project ultimately aims to transform Kathmandu's public transportation landscape by providing a fast, reliable, and environmentally friendly alternative to traditional modes of transport.",
+    "project_contractor": "Investment Board of Nepal.",
+    "project_location": "Ring Road",
+    "project_start_date": "2020-01-01",
+    "project_end_date": "2020-12-31",
+    "project_budget": "16.8 Billion",
+    "extended_count": 0,
+    "project_extended": [
+      {
+        "name": "xyz",
+        "new_completion_date": "2020-12-31",
+        "extended_date": "2021-12-31",
+        "amount_extended": "xyz Kharba",
+        "new_contractor": "John Doe"
       },
-      "ending_coordinate": {
-        "latitude": 27.7172,
-        "longitude": 85.324
+      {
+        "name": "xyz",
+        "new_completion_date": "2020-12-31",
+        "extended_date": "2021-12-31",
+        "amount_extended": "xyz Kharba",
+        "new_contractor": "John Doe"
       }
+    ],
+    "project_currency": "NPR",
+    "project_status": "In Progress",
+    "project_authority": "IBN",
+    "project_manager": "NA",
+    "project_type": "Urban Transport",
+    "project_coordinate": {
+      "latitude": 27.706056275207757,
+      "longitude": 85.31482500395315
     },
-    "road_start_location": "Kathmandu",
-    "road_end_location": "Bhaktapur",
-    "road_length": "10 km",
-    "road_width": "10 m",
-    "road_type": "Asphalt",
-    "road_traffic": "High",
-    "road_condition": "Good"
+    "project_road": {
+      "coords": {
+        "starting_coordinate": {
+          "latitude": 27.706056275207757,
+          "longitude": 85.31482500395315
+        },
+        "ending_coordinate": {
+          "latitude": 27.64516409508935,
+          "longitude": 85.44270147935053
+        }
+      },
+      "road_start_location": "Ratnapark",
+      "road_end_location": "Suryabinayak",
+      "road_length": "27.3 km",
+      "road_width": "7.5 m - 8 m",
+      "road_type": "NA",
+      "road_traffic": "NA",
+      "road_condition": "NA"
+    },
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "NA"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Website",
+        "url": "https://www.website.com"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://web.nepalnews.com/storage/story/1024/Express_Bus_Service_11695200555_1024.jpg"
+      },
+      {
+        "imageurl": "https://nepalinfrastructure.com/wp-content/uploads/2023/09/dedicated-line.jpg"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Investment Board Nepal",
+        "role": "Project Authority",
+        "email": "info@ibn.gov.np",
+        "phone": "+977-1-4575281",
+        "imageurl": "https://assets-cdn.kathmandupost.com/uploads/2023/04/20230417/IBN_Logo.png"
+      }
+    ],
+    "project_total_labours": 500
   },
-  "project_socials": [
-    {
-      "name": "Facebook",
-      "url": "https://www.facebook.com"
+  {
+    "project_name": "Solar street lights being replaced with traditional ones",
+    "project_horizontal_image": "https://www.example.com/image.jpg",
+    "project_ward": "Ward 1",
+    "project_short_description": "This project replaces solar street lights with smart electric street lights. Electric bulbs of 90 and 120 watt capacities are being installed.",
+    "project_description": "Authorities concerned hoped that the solar lights would be economical in the long run, even if the initial investment for installing them costs higher, and also reduce the electricity tariff.\n\nOfficials at the Kathmandu metropolis, however, said that along with advantages, solar lights also have its drawbacks—limited brightness, limited battery life and need to clean up the panel frequently due to excessive dust during the dry season.\n\nKathmandu Metropolitan City (KMC) has installed 1,026 smart 'street lights' at various places in the capital city.\n\nAmong them, 318 lights have been installed in Maharajganj-Lainchaur-Jamal section, 363 in the Maharajgunj National Police Academy-Baluwatar-Naxal-Maitighar Mandala route, 181 from Kamalpokhari to Gaushala, 76 along the Tripureshwor-Thapathali-Maitighar Mandala road, and 99 in Chabahil-Boudha road section.",
+    "project_contractor": "Kathmandu Mertopolitan City",
+    "project_location": "Kathmandu",
+    "project_start_date": "2024-00-00",
+    "project_end_date": "2024-00-00",
+    "project_budget": "Rs110 million",
+    "extended_count": 0,
+    "project_extended": [
+      {
+        "name": "xyz",
+        "new_completion_date": "2020-12-31",
+        "extended_date": "2021-12-31",
+        "amount_extended": "xyz Kharba",
+        "new_contractor": "John Doe"
+      },
+      {
+        "name": "xyz",
+        "new_completion_date": "2020-12-31",
+        "extended_date": "2021-12-31",
+        "amount_extended": "xyz Kharba",
+        "new_contractor": "John Doe"
+      }
+    ],
+    "project_currency": "$ 822,512.24",
+    "project_status": "In Progress",
+    "project_authority": "KMC and NEA",
+    "project_manager": "Jane Doe",
+    "project_type": "Road",
+    "project_coordinate": {
+      "latitude": 27.7172,
+      "longitude": 85.324
     },
-    {
-      "name": "Twitter",
-      "url": "https://www.twitter.com"
+    "project_road": {
+      "coords": {
+        "starting_coordinate": {
+          "latitude": 27.7172,
+          "longitude": 85.324
+        },
+        "ending_coordinate": {
+          "latitude": 27.7172,
+          "longitude": 85.324
+        }
+      },
+      "road_start_location": "Kathmandu",
+      "road_end_location": "Bhaktapur",
+      "road_length": "10 km",
+      "road_width": "10 m",
+      "road_type": "Asphalt",
+      "road_traffic": "High",
+      "road_condition": "Good"
     },
-    {
-      "name": "Instagram",
-      "url": "https://www.instagram.com"
-    },
-    {
-      "name": "Wesbite",
-      "url": "https://www.wesbite.com"
-    }
-  ],
-  "project_images": [
-    {
-      "imageurl": "https://www.example.com/image.jpg"
-    },
-    {
-      "imageurl": "https://www.example.com/image.jpg"
-    }
-  ],
-  "project_team": [
-    {
-      "name": "Kathmandu Metropolitan City",
-      "role": "Project Authority",
-      "email": "",
-      "phone": "",
-      "imageurl": "https://www.example.com/image.jpg"
-    },
-    {
-      "name": "Jane Doe",
-      "role": "Project Manager",
-      "email": "",
-      "phone": "",
-
-      "imageurl": "https://www.example.com/image.jpg"
-    },
-    {
-      "name": "John Smith",
-      "role": "Developer",
-      "email": "",
-      "phone": "",
-
-      "imageurl": "https://www.example.com/image.jpg"
-    }
-  ],
-  "project_totalloabours": 10
-}
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://www.twitter.com"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com"
+      },
+      {
+        "name": "Website",
+        "url": "https://www.website.com"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://www.example.com/image.jpg"
+      },
+      {
+        "imageurl": "https://www.example.com/image.jpg"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Kathmandu Metropolitan City",
+        "role": "Project Authority",
+        "email": "",
+        "phone": "",
+        "imageurl": "https://www.example.com/image.jpg"
+      },
+      {
+        "name": "Jane Doe",
+        "role": "Project Manager",
+        "email": "",
+        "phone": "",
+        "imageurl": "https://www.example.com/image.jpg"
+      },
+      {
+        "name": "John Smith",
+        "role": "Developer",
+        "email": "",
+        "phone": "",
+        "imageurl": "https://www.example.com/image.jpg"
+      }
+    ],
+    "project_total_labours": 10
+  }
+]
