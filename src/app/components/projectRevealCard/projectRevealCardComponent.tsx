@@ -152,7 +152,12 @@ const ProjectRevealCardComponent = () => {
                   </dd>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  <dt style={{}} className="mb-2 text-2xl font-bold">
+                  <dt
+                    style={{
+                      textAlign: "center",
+                    }}
+                    className="mb-2 text-2xl font-bold justify-center"
+                  >
                     {selectedProject?.project_contractor}
                   </dt>
                   <dd className="text-gray-500 dark:text-gray-400">
@@ -204,7 +209,14 @@ const ProjectRevealCardComponent = () => {
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTigrynhD-SE5VcrJXysd0ckkeL1u3WRRmwA&s"
                     alt="Bonnie image"
                   />
-                  <h5 className="mb-1 text-2 font-medium text-gray-900 dark:text-white">
+                  <h5
+                    style={{
+                      textAlign: "center",
+                      paddingRight: 4,
+                      paddingLeft: 4,
+                    }}
+                    className="mb-1 text-2 font-medium text-gray-900 dark:text-white"
+                  >
                     {authority.name}
                   </h5>
                   <span className="text-sm text-gray-500 dark:text-gray-400">

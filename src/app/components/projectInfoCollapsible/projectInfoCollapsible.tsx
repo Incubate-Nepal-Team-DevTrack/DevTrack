@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -10,8 +10,16 @@ import {
 import { ChevronsUpDown, Plus, X } from "lucide-react";
 import { AnimatedTooltip } from "@/components/ui/tooltip";
 import { AnimatedTooltipPreview } from "../tooltip/tooltip";
-
+import AppContext from "@/app/context/Context";
 const ProjectInfoCollapsible = () => {
+  let {
+    count,
+    setCount,
+    selectedOption,
+    setSelectedOption,
+    selectedProject,
+    setSelectedProject,
+  } = useContext(AppContext);
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -23,7 +31,7 @@ const ProjectInfoCollapsible = () => {
       >
         <div className="flex h-12 items-center justify-between space-x-4 px-4">
           <h4 className="text-sm font-semibold">
-            Melamchi Water Supply Project
+            {selectedProject.project_name}
           </h4>
           <CollapsibleTrigger asChild>
             <Button variant="ghost" size="sm" className="w-9 p-0">
@@ -45,7 +53,7 @@ const ProjectInfoCollapsible = () => {
             <div className="p-5">
               <a href="#">
                 <h5 className="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Melamchi Water Supply Project
+                  {selectedProject.project_name}
                 </h5>
               </a>
               <p
@@ -58,9 +66,7 @@ const ProjectInfoCollapsible = () => {
                 }}
                 className="mb-3 font-normal text-gray-700 dark:text-gray-400"
               >
-                The Melamchi Water Supply Project (MWSP) is considered to be the
-                most viable long-term alternative to ease the chronic water
-                shortage situation within the Kathmandu Valley.
+                {selectedProject.project_short_description}
               </p>
               <h3 className="text-sm font-semibold">Authorities Involved</h3>
 
@@ -88,7 +94,7 @@ const ProjectInfoCollapsible = () => {
                   }}
                   className=" font-normal text-gray-700 dark:text-gray-400"
                 >
-                  Start Time : 2021-10-10
+                  Start Time : {selectedProject.project_start_date}
                 </p>
                 <p
                   style={{
@@ -100,7 +106,7 @@ const ProjectInfoCollapsible = () => {
                   }}
                   className=" font-normal text-gray-700 dark:text-gray-400"
                 >
-                  Estimated Completion Time : 2023-10-10
+                  Estimated Completion Time: {selectedProject.project_end_date}
                 </p>{" "}
                 <p
                   style={{
@@ -112,7 +118,7 @@ const ProjectInfoCollapsible = () => {
                   }}
                   className=" font-normal text-gray-700 dark:text-gray-400"
                 >
-                  Constructor: China Railway 15th Bureau Group Ltd.
+                  Constructor: {selectedProject.project_contractor}
                 </p>{" "}
                 <p
                   style={{
@@ -124,7 +130,7 @@ const ProjectInfoCollapsible = () => {
                   }}
                   className=" font-normal text-gray-700 dark:text-gray-400"
                 >
-                  Authority : Melamchi Water Supply Development Board
+                  Authority : {selectedProject.project_authority}
                 </p>{" "}
                 <p
                   style={{

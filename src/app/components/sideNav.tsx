@@ -31,6 +31,7 @@ const SideNav = () => {
     setCount,
     selectedOption,
     setSelectedOption,
+
     setSelectedProject,
     selectedProject,
   } = useContext(AppContext);
@@ -212,6 +213,7 @@ const SideNav = () => {
                 onClick={() => {
                   setLocalSelectedProject(project.project_name);
                   setSelectedProject(project);
+                  setSelectedOption("detail");
                 }}
                 style={{
                   width: 300,

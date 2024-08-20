@@ -1,11 +1,18 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-
+import AppContext from "../context/Context";
 export default function GoogleMaps() {
   const mapRef = React.useRef<HTMLDivElement>(null);
-
+  let {
+    count,
+    setCount,
+    selectedOption,
+    setSelectedOption,
+    selectedProject,
+    setSelectedProject,
+  } = useContext(AppContext);
   useEffect(() => {
     const initializeMap = async () => {
       const loader = new Loader({
@@ -16,8 +23,8 @@ export default function GoogleMaps() {
       const { Map } = await loader.importLibrary("maps");
 
       const locationInMap = {
-        lat: 27.694418231531728,
-        lng: 85.32734418301817,
+        lat: selectedProject?.project_coordinate.latitude,
+        lng: selectedProject?.project_coordinate.longitude,
       };
 
       // MARKER

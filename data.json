@@ -198,5 +198,445 @@
       }
     ],
     "project_total_labours": 10
+  },
+  {
+    "project_name": "Bagmati River Basin Improvement Project (BRBIP)",
+    "project_horizontal_image": "https://www.brbip.gov.np/assets/images/about_01.jpg",
+    "project_ward": "Kathmandu Valley",
+    "project_short_description": "The Bagmati River Basin Improvement Project aims to enhance water security and improve the environment of the Bagmati River Basin through a combination of infrastructure development and environmental conservation measures.",
+    "project_description": "The Bagmati River Basin Improvement Project (BRBIP) is an initiative aimed at restoring the ecological health of the Bagmati River Basin. The project focuses on improving water management, building infrastructure like dams and wastewater treatment facilities, and promoting sustainable environmental practices. Although some components, like the Dhap Dam, have been completed, the project is still ongoing, with major elements such as the Nagmati Dam and various river management efforts under construction.",
+    "project_contractor": "Centre for Green Economy Development, Nepal (CGED, Nepal)",
+    "project_location": "Bagmati River Basin, Kathmandu Valley",
+    "project_start_date": "31 Oct 2013",
+    "project_end_date": "31 May 2025",
+    "project_budget": "78.8 Million",
+
+    "project_currency": "USD",
+    "project_status": "Ongoing",
+    "project_authority": "Government of Nepal, High-Powered Committee for Integrated Development of the Bagmati Civilization (HPCIDBC)",
+    "project_manager": "NA",
+    "project_type": "Environmental Conservation, Infrastructure Development",
+    "project_coordinate": {
+      "latitude": "27.711376755951825",
+      "longitude": "85.35446814260068"
+    },
+    "project_road": {
+      "coords": {
+        "starting_coordinate": {
+          "latitude": "27.711376755951825",
+          "longitude": "85.35446814260068"
+        },
+        "ending_coordinate": {
+          "latitude": "NA",
+          "longitude": "NA"
+        }
+      }
+    },
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "NA"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Reference Website",
+        "url": "https://www.adb.org/sites/default/files/project-documents/43448/43448-013-emr-en_14.pdf"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://dhapdam.gov.np/media/introduction/229332818_553854539195189_311442083727733810_n.jpg"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Centre for Green Economy Development, Nepal (CGED, Nepal)",
+        "role": "Contractor",
+        "email": "cged.nepal@gmail.com",
+        "phone": "+977 01-4445565",
+        "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF27YibgJEAtwYh4GawCqQov7QMe3jgeVDtw&s"
+      },
+      {
+        "name": "Government of Nepal",
+        "role": "Authority",
+        "email": "nationalportal@nitc.gov.np",
+        "phone": "+977-1-4211917",
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/Governmentlogo_20200312190212.jpg"
+      },
+      {
+        "name": "High-Powered Committee for Integrated Development of the Bagmati Civilization (HPCIDBC)",
+        "role": "Authority",
+        "email": "hpcidbcoffice@gmail.com",
+        "phone": "+977-1-4114413",
+        "imageurl": "https://image.slidesharecdn.com/01hpcidbcpresentationaww2013-final-130611205409-phpapp01/85/Improving-Water-Security-in-Water-Stressed-Bagmati-River-Basin-Nepal-2-4-320.jpg"
+      }
+    ],
+    "project_totallabours": 0
+  },
+  {
+    "project_name": "Kathmandu Outer Ring Road (ORR) Development Project",
+    "project_horizontal_image": "https://nepalindata.com/media/insight/Outer_Ring_Road_6_june_1.jpg",
+    "project_ward": "Kathmandu, Lalitpur, Bhaktapur",
+    "project_short_description": "The Kathmandu Outer Ring Road Development Project aims to construct a 72 km long ring road encircling the Kathmandu Valley, improving connectivity and reducing traffic congestion in the valley.",
+    "project_description": "The Kathmandu Outer Ring Road (ORR) Development Project is an ambitious infrastructure initiative aimed at constructing a 72 km long ring road encircling the Kathmandu Valley. This road will traverse through the three districts of the valley: Kathmandu, Lalitpur, and Bhaktapur. The project is designed to alleviate traffic congestion in the valley by creating an alternative route around the city center and enhancing connectivity.",
+    "project_contractor": "China Energy Engineering Corporation Limited",
+    "project_location": "Kathmandu, Lalitpur, Bhaktapur",
+    "project_start_date": "In Planning",
+    "project_end_date": "NA",
+    "project_budget": "252 Billion",
+    "extended_count": 0,
+    "project_extended": [],
+    "project_currency": "NPR",
+    "project_status": "Planning Phase",
+    "project_authority": "Government of Nepal, Ministry of Urban Development",
+    "project_manager": "NA",
+    "project_type": "Infrastructure Development, Road Construction",
+    "project_coordinate": {
+      "latitude": "27.66707587423168",
+      "longitude": "85.29016331101116"
+    },
+    "road_start_location": "Kathmandu Valley",
+    "road_end_location": "Kathmandu Valley",
+    "road_length": "72 km",
+    "road_width": "50 m",
+    "road_type": "Ring Road",
+    "road_condition": "Planned",
+
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "NA"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Reference Website",
+        "url": "https://nepalindata.com/media/resources/items/15/bKathmandu-Outer-Ring-Road-ORR-Development-Project.pdf"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://english.onlinekhabar.com/wp-content/uploads/2017/10/outer-ring-road.jpg"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "China Energy Engineering Corporation Limited",
+        "role": "Contractor",
+        "email": "info@ceecglobal.net",
+        "phone": "NA",
+        "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREl6Jy_lyTGxQB73ocN8e6U-nOqN_Q4ivI4g&s"
+      },
+      {
+        "name": "Government of Nepal",
+        "role": "Authority",
+        "email": "ationalportal@nitc.gov.np",
+        "phone": "+977-1-4211917",
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/Governmentlogo_20200312190212.jpg"
+      },
+      {
+        "name": "Ministry of Urban Development",
+        "role": "Authority",
+        "email": "info@moud.gov.np",
+        "phone": "+977-1-4211762",
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/MinistryofUrbanDevelopment_20220828143816.jpg"
+      }
+    ],
+    "project_totallabours": 0
+  },
+  {
+    "project_name": "Gwarko Flyover Project",
+    "project_horizontal_iamge": "https://nepalesevoice.com/wp-content/uploads/2022/12/gwarko-flyover-overpass-1024x576-Copy.jpg",
+    "project_ward": "Gwarko, Lalitpur",
+    "project_short_description": "The Gwarko Flyover is a critical infrastructure project in Lalitpur, aiming to ease traffic congestion along the Ring Road and the Mangal Bazar-Imadol-Lubhu road section.",
+    "project_description": "The Gwarko Flyover, located in Lalitpur, Kathmandu, is a four-lane flyover with a total length of 455 meters. It features a 280-meter ramp on one side and a 175-meter ramp on the other, along with a 35-meter-long bridge. The construction began in February 2022 and is expected to be completed by mid-2024. The project is being implemented under the Engineering Procurement Construction (EPC) model, with M/S Ashish Samanantar JV as the contractor. Despite initial design issues causing delays, the construction has picked up pace and is now progressing steadily.",
+    "project_contractor": "Ashish-Samanantar-Religare JV",
+    "project_location": "Gwarko, Lalitpur",
+    "project_start_date": "Feb 24 2022",
+    "project_end_date": "Feb 24 20024",
+    "project_budget": "176.88 Million",
+    "extnded_count": 1,
+    "project_extended:": [
+      {
+        "name": "Gwarko Flyover Project",
+        "new_completion_date": "NA",
+        "extended_date": "NA"
+      }
+    ],
+    "project_currency": "NPR",
+    "project_status": "In Progress",
+    "project_authority": "Department of Roads (DoR)",
+    "project_manager": "Rakesh Maharjan",
+    "project_type": "Flyover",
+    "project_coordinate": {
+      "latitude": 27.668518586859868,
+      "longitude": 85.33475053958168
+    },
+    "project_road": {
+      "coords": {
+        "starting_coordinate": {
+          "latitude": 27.668518586859868,
+          "longitude": 85.33475053958168
+        },
+        "ending_coordinate": {
+          "latitude": 27.666760478188454,
+          "longitude": 85.33211720900432
+        }
+      },
+      "road_start_location": "Gwarko, Lalitpur",
+      "road_end_location": "Gwarko, Lalitpur",
+      "road_length": "455 m",
+      "road_width": "NA",
+      "road_type": "Flyover",
+      "road_height": "6 m ",
+      "road_traffic": "NA",
+      "road_condition": "Under Construction"
+    },
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "NA"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Wesbite",
+        "url": "NA"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://encdn.ratopati.com/media/news/cover-gwarko-flyover_sE614PMjMs_nF6diQL2EV.jpg"
+      },
+      {
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/1707022460_yofu-1200x560_20240204132126.jpg"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Ashish-Samanantar-Religare JV",
+        "role": "Constructor",
+        "email": "NA",
+        "phone": "NA",
+        "imageurl": "NA"
+      },
+      {
+        "name": "Department of Roads (DoR)",
+        "role": "Authority",
+        "email": "dgdor@dor.gov.np",
+        "phone": " +977-1-5429075",
+
+        "imageurl": "https://nepalrastriyadainik.com/en/wp-content/uploads/2022/06/sadak-bibhag.jpg"
+      },
+      {
+        "name": "Rakesh Maharjan",
+        "role": "Senior Divisional Engineer",
+        "email": "NA",
+        "phone": "NA",
+
+        "imageurl": "NA"
+      }
+    ],
+    "project_totalloabours": 0
+  },
+  {
+    "project_name": "Nagdhunga Tunnel Construction Project",
+    "project_horizontal_iamge": "https://web.nepalnews.com/storage/story/1024/Nagdhungatunnel1613135744_1024.jpg",
+    "project_ward": "Kathmandu and Dhading",
+    "project_short_description": "The Nagdhunga Tunnel project in Nepal involves constructing a 2.68 km main tunnel and a 2.55 km evacuation tunnel. It aims to ease traffic between Nagdhunga and Sisne Khola",
+    "project_description": "The Nagdhunga Tunnel project, starting in November 2019 and expected to complete by April 2024, features a 2.68 km main tunnel, a 2.55 km evacuation tunnel, and a 2.6 km approach road. Funded by a Rs15.28 billion Japanese loan, it includes advanced lighting, ventilation, and emergency systems.",
+    "project_contractor": "Hazama Ando Corporation",
+    "project_location": "Kathmandu and Dhading",
+    "project_start_date": "October 2019",
+    "project_end_date": "April 2023",
+    "project_budget": "22 Billion",
+    "extnded_count": 2,
+    "project_extended:": [
+      {
+        "name": "Nagdhunga Tunnel Construction Project",
+        "new_completion_date": "April 2024",
+        "extended_date": "Apr 2024"
+      },
+      {
+        "name": "Nagdhunga Tunnel Construction Project",
+        "new_completion_date": "2020-12-31",
+        "extended_date": "NA"
+      }
+    ],
+    "project_currency": "NPR",
+    "project_status": "In Progress",
+    "project_authority": "Ministry of Physical Infrastructure and Transport (MoPIT)",
+    "project_manager": "NA",
+    "project_type": "Underground Tunnel Transport",
+    "project_coordinate": {
+      "latitude": 27.708015705900138,
+      "longitude": 85.20034522036593
+    },
+    "project_road": {
+      "coords": {
+        "starting_coordinate": {
+          "latitude": 27.708015705900138,
+          "longitude": 85.20034522036593
+        },
+        "ending_coordinate": {
+          "latitude": 27.703473285815434,
+          "longitude": 85.22391601511697
+        }
+      },
+      "road_start_location": "Sisnekhola, Dhading",
+      "road_end_location": "Nagdhunga, Kathmandu",
+      "road_length": "2688 m",
+      "road_width": "9.5 m ",
+      "road_type": "Tunnel",
+      "road_height": "8.3 m ",
+      "road_traffic": "NA",
+      "road_condition": "under construction"
+    },
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/nagdhungatunnel"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Reference Wesbite",
+        "url": "https://en.wikipedia.org/wiki/Nagdhunga_tunnel"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM7uHTlzEmypjH6T1Yfir09tICaDpYvPo7kA&s"
+      },
+      {
+        "imageurl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nagdhunga_Tunnel.png/560px-Nagdhunga_Tunnel.png"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Hazama Ando Corporation",
+        "role": "Constructor",
+        "email": "NA",
+        "phone": "81-3-3575-6150",
+        "imageurl": "https://builtworlds.com/wp-content/uploads/2020/05/Hazama-Ando-Logo3.jpg"
+      },
+      {
+        "name": "Ministry of Physical Infrastructure and Transport (MoPIT)",
+        "role": "Authority",
+        "email": "info@mopit.gov.np",
+        "phone": "+977-1-4211732",
+
+        "imageurl": "https://mopit.gov.np/ban-img/website_1558848291-1687328445.jpg"
+      },
+      {
+        "name": "",
+        "role": "",
+        "email": "",
+        "phone": "",
+
+        "imageurl": "https://www.example.com/image.jpg"
+      }
+    ],
+    "project_totalloabours": 0
+  },
+  {
+    "project_name": "Kathmandu Valley Water Supply Improvement Project",
+    "project_horizontal_iamge": "https://img.freepik.com/free-photo/young-woman-drinking-water-from-fountain_1391-535.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722556800&semt=ais_hybrid",
+    "project_ward": "Whole Kathmandu",
+    "project_short_description": "The proposed Kathmandu Valley Water Supply Improvement Project will build on ongoing efforts of the Government of Nepal and the Asian Development Bank (ADB) to further improve water supply services and planning in the Kathmandu Valley.",
+    "project_description": "The project aims to ensure drinking water security in the Kathmandu Valley and provide access to safe, sustainable, resilient, and inclusive water supply services to two million people by (i) constructing climate- and disaster-resilient urban water supply infrastructure, (ii) strengthening systems to improve the efficiency, sustainability and resilience of the water supply services, and (iii) enhancing the capacity of urban water supply institutions and stakeholders. The project is a continuation of the ongoing strong partnership between the Asian Development Bank (ADB) and the Government of Nepal to support the water and urban sector in the country.",
+
+    "project_contractor": "Melamchi Water Supply Development Board",
+    "project_location": "18 municipalities, 3 districts (Kathmandu, Bhaktapur, and Lalitpur)",
+    "project_start_date": "2022-01-01",
+    "project_end_date": "2028-12-31",
+    "project_budget": "230 million",
+    "project_currency": "USD",
+    "project_status": "In Progress",
+    "project_authority": "Kathmandu Valley Water Supply Management Board",
+    "project_manager": "NA",
+    "project_type": "Water Supply",
+    "project_coordinate": {
+      "latitude": 27.7284665,
+      "longitude": 85.2471833
+    },
+
+    "project_socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=237621793058447&paipv=0&eav=Afa61PNjjSEBJxyYUFmJO67xRg9DpB3NXTjmnguhAc7qsLke6ltzDt7nvqQXoMFoBiQ&_rdr"
+      },
+      {
+        "name": "Twitter",
+        "url": "NA"
+      },
+      {
+        "name": "Instagram",
+        "url": "NA"
+      },
+      {
+        "name": "Wesbite",
+        "url": "https://www.melamchiwater.gov.np/"
+      }
+    ],
+    "project_images": [
+      {
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/MelamchiWaterSupplyDevelopmentBoard_20230420093201.jpg"
+      },
+      {
+        "imageurl": "https://www.adb.org/sites/default/files/styles/cover_top/public/cover-30139.png?itok=j9QVy2qF"
+      }
+    ],
+    "project_team": [
+      {
+        "name": "Kathmandu Valley Water Supply Management Board",
+        "role": "Project Authority",
+        "email": "info@kvwsmb.org.np",
+        "phone": "+977 1 5591737, 5591937",
+        "imageurl": "http://kvwsmb.org.np/wp-content/uploads/2014/03/intro.jpg"
+      },
+      {
+        "name": "Melamchi Water Supply Development Board",
+        "role": "Contractor",
+        "email": "info@melamchiwater.gov.np",
+        "phone": "+977-1- 4006543",
+
+        "imageurl": "https://myrepublica.nagariknetwork.com/uploads/media/MelamchiWaterSupplyDevelopmentBoard_20230420093201.jpg"
+      },
+      {
+        "name": "",
+        "role": "",
+        "email": "",
+        "phone": "",
+
+        "imageurl": "https://www.example.com/image.jpg"
+      }
+    ],
+    "project_totalloabours": 0
   }
 ]
