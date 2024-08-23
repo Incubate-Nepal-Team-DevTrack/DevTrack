@@ -19,7 +19,14 @@ export default function NavBar() {
     console.log(value);
   }
   return (
-    <nav className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700">
+    <nav style={{
+      color: "black",
+      fontFamily: "Poppins",
+      fontSize: "1.5rem",
+      fontWeight: "700",
+      position: "fixed",
+    }}
+    className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700">
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start rtl:justify-end">

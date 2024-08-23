@@ -1,34 +1,29 @@
 "use client";
+import React, { useContext } from "react";
 import GoogleMaps from "@/app/components/mapProvider";
-import NavBar from "@/app/components/navbar/navBar";
 import ProjectRevealCardComponent from "@/app/components/projectRevealCard/projectRevealCardComponent";
-import SideNav from "@/app/components/sideNav";
-import React from "react";
-import Layout from "./layout";
-
-import { useContext, useState } from "react";
-import AppContext from "@/app/context/Context";
 import ProjectInfoCollapsible from "@/app/components/projectInfoCollapsible/projectInfoCollapsible";
+import AppContext from "@/app/context/Context";
+import "@/app/globals.css"; 
+
 const MapScreen = () => {
-  let { count, setCount, selectedOption, setSelectedOption } =
-    useContext(AppContext);
+  let { selectedOption } = useContext(AppContext);
+
   return (
-    <div className="h-full w-full flex">
+    <div className="mapScreenCustomScrollbar h-full w-full flex">
       <div className="h-full w-full flex flex-col">
         <div
-          className="h-full w-ful flex-row"
+          className="h-full w-full flex-row"
           style={{
             height: "100%",
+            position: "relative",
           }}
         >
           <div
             style={{
               marginTop: 80,
               height: "90vh",
-
               display: "flex",
-
-              // backgroundColor: "blue",
             }}
           >
             {selectedOption === "map" ? (
@@ -48,7 +43,6 @@ const MapScreen = () => {
                     right: 0,
                     backgroundColor: "white",
                     display: "flex",
-                    // width: "100%",
                     alignItems: "center",
                     justifyContent: "center",
                     borderTop: "1px solid #eaeaea",

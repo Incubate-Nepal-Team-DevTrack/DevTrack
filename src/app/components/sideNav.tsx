@@ -22,6 +22,7 @@ import project_types from "./dataComponents/projectTypes";
 import wards from "./dataComponents/wards";
 import AppContext from "../context/Context";
 import ProjectData from "../../../data.json";
+import "@/app/globals.css"; 
 const SideNav = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const {
@@ -56,7 +57,7 @@ const SideNav = () => {
       id="logo-sidebar"
       className="fixed top-0 left-0 z-40 w-65 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 "
     >
-      <div className="h-full px-3 pb-4 overflow-y-auto bg-white ">
+      <div className=" mapScreenCustomScrollbar h-full px-3 pb-4 overflow-y-auto bg-white ">
         <div
           style={{
             position: "fixed",

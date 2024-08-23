@@ -4,60 +4,60 @@ import NavBar from "@/app/components/navbar/navBar";
 import React from "react";
 import SideNav from "@/app/components/sideNav";
 import { ContextProvider } from "@/app/context/Context";
+import Credits from "@/app/components/credits";
+import Footer from "@/app/components/footer";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ContextProvider>
-      <main
-        style={{
-          flex: 1,
-          width: "100%",
-          justifyContent: "center",
-        }}
-      >
-        <div
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <header
           style={{
             position: "fixed",
             width: "100%",
             zIndex: 1000,
           }}
         >
-          {" "}
           <NavBar />
-        </div>
-        <div
-          style={{
-            flex: 1,
-            width: "100%",
-            flexDirection: "row",
-            display: "flex",
-            height: "100%",
-          }}
-        >
-          <div
+        </header>
+        <div style={{ display: "flex", flex: 1 }}>
+          <aside
             style={{
-              display: "flex",
               flex: 0.22,
               backgroundColor: "#f9f9f9",
-              height: "100%",
+              height: "100vh",
+              position: "relative",
+              zIndex: 900,
             }}
           >
             <SideNav />
-          </div>
+          </aside>
 
-          <div
+          <main
             style={{
-              width: "100%",
               flex: 0.78,
               backgroundColor: "#f9f9f9",
-
-              justifyContent: "center",
-              alignItems: "center",
+              paddingBottom: "2rem", // Add padding to ensure content is not hidden behind the footer
             }}
           >
             {children}
-          </div>
+          </main>
         </div>
-      </main>
+        <div style={{ position: 'relative' }}>
+          <Credits />
+        </div>
+        <footer
+          style={{
+            position: "static",
+            bottom: 0,
+            width: "100%",
+            backgroundColor: "#f9f9f9",
+            padding: "20px 0",
+            zIndex: 1001, // Ensure it is above all other content
+          }}
+        >
+          <Footer />
+        </footer>
+      </div>
     </ContextProvider>
   );
 };
