@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+.wrapper {
+  margin-top: 5%;
+}
+
+.wrapper h1 {
+  font-family: 'Poppins';
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+  color:#11181c;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member {
+  margin: 5px;
+  margin-bottom: 80px; /* Adjusted margin-bottom for vertical spacing */
+  width: 250px; /* Adjusted width */
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+  border: 1.75px solid #d2d4d9; /* Updated border color and increased border width */
+  background-color: #fff; /* Ensured inside of the card is white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+  border-radius: 10px;
+}
+
+.team .team_member h3 {
+  color: #2da26b;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role {
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+.team .team_member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+.team .team_member .social_icons {
+    margin-top: 15px;
+  }
+  
+  .team .team_member .social_icons a {
+    margin: 0 10px;
+    color: #2da26b; /* Adjust icon color */
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+/* Additional styling for responsive design */
+@media (min-width: 600px) {
+  .team_member:nth-child(1), 
+  .team_member:nth-child(2) {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 900px) {
+  .team_member:nth-child(3), 
+  .team_member:nth-child(4), 
+  .team_member:nth-child(5) {
+    width: calc(33.333% - 10px);
+  }
+
+  .team_member:nth-child(6), 
+  .team_member:nth-child(7), 
+  .team_member:nth-child(8) {
+    width: calc(33.333% - 10px);
+  }
+}
