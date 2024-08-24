@@ -32,7 +32,7 @@ const ProjectRevealCardComponent = () => {
         <img
           className="w-full"
           style={{
-            height: 300,
+            height: 350,
             borderRadius: "0.375rem",
           }}
           src={selectedProject.project_horizontal_image}

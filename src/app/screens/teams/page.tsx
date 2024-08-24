@@ -215,7 +215,7 @@ const TeamScreen = () => {
                     font-bold text-gray-500 dark:text-gray-400 text-center
                     text-gray-500 dark:text-gray-400"
                     >
-                      Mentor
+                      Mentee
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400 px-[20px] pt-[4px] justify-center text-justify flex">
                       {team.description}
