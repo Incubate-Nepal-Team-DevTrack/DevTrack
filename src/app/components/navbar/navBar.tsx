@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { AnimatedSubscribeButton } from "@/components/magicui/animated-subscribe-button";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -19,14 +19,16 @@ export default function NavBar() {
     console.log(value);
   }
   return (
-    <nav style={{
-      color: "black",
-      fontFamily: "Poppins",
-      fontSize: "1.5rem",
-      fontWeight: "700",
-      position: "fixed",
-    }}
-    className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700">
+    <nav
+      style={{
+        color: "black",
+        fontFamily: "Poppins",
+        fontSize: "1.5rem",
+        fontWeight: "700",
+        position: "fixed",
+      }}
+      className=" z-50 w-full bg-white border-b border-gray-200 dark:bg-#FFFFFF-800 dark:border-gray-700"
+    >
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start rtl:justify-end">
@@ -68,23 +70,23 @@ export default function NavBar() {
                 marginTop: 10,
               }}
             >
-              <Button
-                onClick={() => {
-                  alert("No wonder you are smart, but it is not available.");
-                }}
-                style={{
-                  backgroundColor: "black",
-                  height: 40,
-                  width: 140,
-                  color: "white",
-                  marginLeft: 10,
-                  borderColor: "black",
-                  borderWidth: 1,
-                  fontWeight: "bold",
-                }}
-              >
-                Teams
-              </Button>
+              <Link href="/screens/teams">
+                <Button
+                  onClick={() => {}}
+                  style={{
+                    backgroundColor: "black",
+                    height: 40,
+                    width: 140,
+                    color: "white",
+                    marginLeft: 10,
+                    borderColor: "black",
+                    borderWidth: 1,
+                    fontWeight: "bold",
+                  }}
+                >
+                  Teams
+                </Button>
+              </Link>
             </div>
             <div
               style={{
@@ -94,7 +96,10 @@ export default function NavBar() {
             >
               <Button
                 onClick={() => {
-                  alert("You are definitely jealous.");
+                  window.open(
+                    "https://github.com/Incubate-Nepal-Team-DevTrack/DevTrack",
+                    "_blank"
+                  );
                 }}
                 style={{
                   backgroundColor: "white",
