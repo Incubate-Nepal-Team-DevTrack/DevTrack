@@ -77,8 +77,7 @@ const TeamScreen = () => {
       portfolio: "https://prashim.com.np",
       description:
         "Kristina Khanal refined ideas with mentors, coordinated tasks among the team, and finalized collaborations with KMC. He also contributed to computation, coding, and managing the GitHub repository.",
-      photo:
-        "https://drive.google.com/open?id=1szlbxm9HrOu_zZrTy9zE6yTwuUKVly5q",
+      photo: "/assets/photos/kristy.png",
     },
   ];
 
@@ -98,11 +97,25 @@ const TeamScreen = () => {
           >
             <div className=" w-[38rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <div className="   flex flex-col items-center pb-10">
-                <div className="h-[16rem] w-full">
+                <div
+                  style={{
+                    width: "350px",
+                    height: "350px",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                  className="h-[16rem] w-full"
+                >
                   <img
                     className="w-full h-full mb-3  shadow-lg"
                     src="/assets/photos/subham.jpg"
                     alt="Bonnie image"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
                   />
                 </div>
 
@@ -111,7 +124,7 @@ const TeamScreen = () => {
                 font-bold text-2xl text-gray-900 dark:text-white text-center
                 mb-1 mt-[0.8rem] text-xl  text-gray-900 dark:text-white"
                 >
-                  Subham Jha
+                  Shubham Jha
                 </h5>
                 <span
                   className="text-sm  
@@ -144,11 +157,25 @@ const TeamScreen = () => {
             </div>
             <div className=" w-[24rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <div className="   flex flex-col items-center pb-10">
-                <div className="h-[16rem] w-full">
+              <div
+                  style={{
+                    width: "350px",
+                    height: "350px",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                  className="h-[16rem] w-full"
+                >
                   <img
                     className="w-full h-full mb-3  shadow-lg"
                     src="/assets/photos/prashim.png"
                     alt="Bonnie image"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                    }}
                   />
                 </div>
 
@@ -190,18 +217,32 @@ const TeamScreen = () => {
             </div>
           </div>
 
-          <div className="h-full grid grid-cols-1 md:grid-cols-3 mt-[1rem] gap-4 justify-items-center">
+          <div className="h-full grid grid-cols-1 md:grid-cols-3 mt-10 gap-4 justify-items-center">
             {teams.map((team) => {
               return (
                 <div className=" w-[38rem] max-w-sm bg-black flex flex-row border border-gray-200 bg-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="   flex flex-col  items-center pb-10 bg-white">
-                    <div className="h-[20rem] w-full">
-                      <img
-                        className="w-full h-full mb-3  shadow-lg"
-                        src={team.photo}
-                        alt="Bonnie image"
-                      />
-                    </div>
+                  <div
+                  style={{
+                    width: "350px",
+                    height: "350px",
+                    overflow: "hidden",
+                    position: "relative",
+                  }}
+                  className="h-[16rem] w-full"
+                >
+                  <img
+                    className="w-full h-full mb-3  shadow-lg"
+                    src={team.photo}
+                    alt="Bonnie image"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                    }}
+                  />
+                </div>
 
                     <h5
                       className="
