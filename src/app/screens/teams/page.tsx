@@ -165,7 +165,7 @@ const TeamScreen = () => {
                 >
                   <img
                     className="w-full h-full mb-3  shadow-lg"
-                    src="/assets/photos/prashim.png"
+                    src="/assets/photos/Prashim_Timsina_Right.JPG"
                     alt="Bonnie image"
                     style={{
                       width: "100%",
