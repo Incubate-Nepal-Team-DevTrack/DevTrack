@@ -134,10 +134,7 @@ const TeamScreen = () => {
                   Mentor
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400 px-[20px] pt-[4px] justify-center text-justify flex">
-                  Prashim Timsina refined ideas with mentors, coordinated tasks
-                  among the team, and finalized collaborations with KMC. He also
-                  contributed to computation, coding, and managing the GitHub
-                  repository.
+                  Shubham’s always been passionate about bringing tech and policy together and that’s what he did at DevTrack. He ideated this product and led the entire team to visualize what the development trajectory of Nepal would look like. As a founder, he’s helped the team build powerful connections, learn modern tech, understand bureaucracy and build something first of its kind in Nepal.
                 </span>
                 <div className="flex mt-2 md:mt-2 justify-between  ">
                   <a
