@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "DevTrack is a mission-driven transparency and accountability platform for Kathmandu Metropolitan City. Every rupee tracked. Every promise accountable. Every voice heard.",
 };
 
+
+
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
