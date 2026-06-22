@@ -1,0 +1,461 @@
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.102:3000
+✓ Ready in 321ms
+
+ GET / 200 in 1992ms (next.js: 1838ms, application-code: 154ms)
+ GET /api/auth/me 200 in 277ms (next.js: 235ms, application-code: 42ms)
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].forumThread.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__18-_6ae._.js:79:160
+
+  76 async function GET(req) {
+  77     const { searchParams } = new URL(req.url);
+  78     const projectId = searchParams.get("projectId") || undefined;
+→ 79     const threads = await {imported module ./src/lib/db.ts}["db"].forumThread.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/forum/threads/route.ts:9:40)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/forum/threads/route.ts:9:19)
+   7 |   const { searchParams } = new URL(req.url);
+   8 |   const projectId = searchParams.get("projectId") || undefined;
+>  9 |   const threads = await db.forumThread.findMany({
+     |                                        ^
+  10 |     where: projectId ? { projectId } : { projectId: null },
+  11 |     include: {
+  12 |       author: true, {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].official.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0-vkdr4._.js:73:159
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const officials = await {imported module ./src/lib/db.ts}["db"].official.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/officials/route.ts:5:39)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/officials/route.ts:5:21)
+  3 |
+  4 | export async function GET() {
+> 5 |   const officials = await db.official.findMany({
+    |                                       ^
+  6 |     include: { ward: true },
+  7 |     orderBy: [{ title: "asc" }, { name: "asc" }],
+  8 |   }); {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].ward.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__1nv2goj._.js:73:151
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const wards = await {imported module ./src/lib/db.ts}["db"].ward.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/wards/route.ts:5:31)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/wards/route.ts:5:17)
+  3 |
+  4 | export async function GET() {
+> 5 |   const wards = await db.ward.findMany({ orderBy: { number: "asc" } });
+    |                               ^
+  6 |   return NextResponse.json({ wards });
+  7 | }
+  8 | {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].project.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0ydicbw._.js:104:157
+
+  101         }
+  102     ];
+  103 }
+→ 104 const projects = await {imported module ./src/lib/db.ts}["db"].project.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/projects/route.ts:27:37)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/projects/route.ts:27:20)
+  25 |   }
+  26 |
+> 27 |   const projects = await db.project.findMany({
+     |                                     ^
+  28 |     where,
+  29 |     include: {
+  30 |       category: true, {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].category.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0vj3adf._.js:73:160
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const categories = await {imported module ./src/lib/db.ts}["db"].category.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/categories/route.ts:5:40)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/categories/route.ts:5:22)
+  3 |
+  4 | export async function GET() {
+> 5 |   const categories = await db.category.findMany({ orderBy: { name: "asc" } });
+    |                                        ^
+  6 |   return NextResponse.json({ categories });
+  7 | }
+  8 | {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+ GET /api/forum/threads 500 in 820ms (next.js: 287ms, application-code: 533ms)
+ GET /api/officials 500 in 821ms (next.js: 310ms, application-code: 511ms)
+ GET /api/wards 500 in 822ms (next.js: 331ms, application-code: 491ms)
+ GET /api/projects 500 in 823ms (next.js: 351ms, application-code: 473ms)
+ GET /api/categories 500 in 823ms (next.js: 368ms, application-code: 454ms)
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].betaFeedback.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__1hlcgsd._.js:77:162
+
+  74 ;
+  75 ;
+  76 async function GET() {
+→ 77     const feedback = await {imported module ./src/lib/db.ts}["db"].betaFeedback.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/beta/route.ts:6:42)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/beta/route.ts:6:20)
+  4 |
+  5 | export async function GET() {
+> 6 |   const feedback = await db.betaFeedback.findMany({
+    |                                          ^
+  7 |     include: { user: { select: { name: true, avatarColor: true, role: true } } },
+  8 |     orderBy: { createdAt: "desc" },
+  9 |   }); {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].project.count()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0pv_8fs._.js:74:138
+
+  71 ;
+  72 async function GET() {
+  73     const [projects, citizens, officials, wards, threads, betaCount, totalBudget, totalSpent] = await Promise.all([
+→ 74         {imported module ./src/lib/db.ts}["db"].project.count(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/stats/route.ts:6:16)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/stats/route.ts:5:95)
+  4 | export async function GET() {
+  5 |   const [projects, citizens, officials, wards, threads, betaCount, totalBudget, totalSpent]...
+> 6 |     db.project.count(),
+    |                ^
+  7 |     db.user.count({ where: { role: "CITIZEN" } }),
+  8 |     db.official.count(),
+  9 |     db.ward.count(), {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+ GET /api/beta 500 in 247ms (next.js: 91ms, application-code: 157ms)
+ GET /api/stats 500 in 245ms (next.js: 64ms, application-code: 181ms)
+[browser] Failed to load DevTrack data: SyntaxError: Failed to execute 'json' on 'Response': Unexpected end of JSON input
+    at Home.useEffect (src/app/page.tsx:33:45)
+  31 |       fetch("/api/categories").then((r) => r.json()),
+  32 |       fetch("/api/wards").then((r) => r.json()),
+> 33 |       fetch("/api/officials").then((r) => r.json()),
+     |                                             ^
+  34 |       fetch("/api/forum/threads").then((r) => r.json()),
+  35 |       fetch("/api/beta").then((r) => r.json()),
+  36 |       fetch("/api/stats").then((r) => r.json()), (src/app/page.tsx:47:15)
+ GET / 200 in 47ms (next.js: 9ms, application-code: 38ms)
+ GET /api/auth/me 200 in 27ms (next.js: 7ms, application-code: 20ms)
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].project.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0ydicbw._.js:104:157
+
+  101         }
+  102     ];
+  103 }
+→ 104 const projects = await {imported module ./src/lib/db.ts}["db"].project.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/projects/route.ts:27:37)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/projects/route.ts:27:20)
+  25 |   }
+  26 |
+> 27 |   const projects = await db.project.findMany({
+     |                                     ^
+  28 |     where,
+  29 |     include: {
+  30 |       category: true, {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].category.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0vj3adf._.js:73:160
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const categories = await {imported module ./src/lib/db.ts}["db"].category.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/categories/route.ts:5:40)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/categories/route.ts:5:22)
+  3 |
+  4 | export async function GET() {
+> 5 |   const categories = await db.category.findMany({ orderBy: { name: "asc" } });
+    |                                        ^
+  6 |   return NextResponse.json({ categories });
+  7 | }
+  8 | {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].ward.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__1nv2goj._.js:73:151
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const wards = await {imported module ./src/lib/db.ts}["db"].ward.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/wards/route.ts:5:31)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/wards/route.ts:5:17)
+  3 |
+  4 | export async function GET() {
+> 5 |   const wards = await db.ward.findMany({ orderBy: { number: "asc" } });
+    |                               ^
+  6 |   return NextResponse.json({ wards });
+  7 | }
+  8 | {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].official.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0-vkdr4._.js:73:159
+
+  70 ;
+  71 ;
+  72 async function GET() {
+→ 73     const officials = await {imported module ./src/lib/db.ts}["db"].official.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/officials/route.ts:5:39)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/officials/route.ts:5:21)
+  3 |
+  4 | export async function GET() {
+> 5 |   const officials = await db.official.findMany({
+    |                                       ^
+  6 |     include: { ward: true },
+  7 |     orderBy: [{ title: "asc" }, { name: "asc" }],
+  8 |   }); {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].forumThread.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__18-_6ae._.js:79:160
+
+  76 async function GET(req) {
+  77     const { searchParams } = new URL(req.url);
+  78     const projectId = searchParams.get("projectId") || undefined;
+→ 79     const threads = await {imported module ./src/lib/db.ts}["db"].forumThread.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/forum/threads/route.ts:9:40)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/forum/threads/route.ts:9:19)
+   7 |   const { searchParams } = new URL(req.url);
+   8 |   const projectId = searchParams.get("projectId") || undefined;
+>  9 |   const threads = await db.forumThread.findMany({
+     |                                        ^
+  10 |     where: projectId ? { projectId } : { projectId: null },
+  11 |     include: {
+  12 |       author: true, {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+ GET /api/projects 500 in 531ms (next.js: 12ms, application-code: 519ms)
+ GET /api/categories 500 in 530ms (next.js: 17ms, application-code: 513ms)
+ GET /api/wards 500 in 530ms (next.js: 19ms, application-code: 511ms)
+ GET /api/officials 500 in 530ms (next.js: 20ms, application-code: 509ms)
+ GET /api/forum/threads 500 in 528ms (next.js: 24ms, application-code: 504ms)
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].betaFeedback.findMany()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__1hlcgsd._.js:77:162
+
+  74 ;
+  75 ;
+  76 async function GET() {
+→ 77     const feedback = await {imported module ./src/lib/db.ts}["db"].betaFeedback.findMany(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/beta/route.ts:6:42)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/beta/route.ts:6:20)
+  4 |
+  5 | export async function GET() {
+> 6 |   const feedback = await db.betaFeedback.findMany({
+    |                                          ^
+  7 |     include: { user: { select: { name: true, avatarColor: true, role: true } } },
+  8 |     orderBy: { createdAt: "desc" },
+  9 |   }); {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].project.count()` invocation in
+/Users/prashim/Downloads/Work/DevTrack/DevTrack/.next/dev/server/chunks/[root-of-the-server]__0pv_8fs._.js:74:138
+
+  71 ;
+  72 async function GET() {
+  73     const [projects, citizens, officials, wards, threads, betaCount, totalBudget, totalSpent] = await Promise.all([
+→ 74         {imported module ./src/lib/db.ts}["db"].project.count(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:10
+   | 
+ 9 |   provider = "sqlite"
+10 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at <unknown> (src/app/api/stats/route.ts:6:16)
+    at <unknown> (-->  schema.prisma:10)
+    at async GET (src/app/api/stats/route.ts:5:95)
+  4 | export async function GET() {
+  5 |   const [projects, citizens, officials, wards, threads, betaCount, totalBudget, totalSpent]...
+> 6 |     db.project.count(),
+    |                ^
+  7 |     db.user.count({ where: { role: "CITIZEN" } }),
+  8 |     db.official.count(),
+  9 |     db.ward.count(), {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+ GET /api/beta 500 in 180ms (next.js: 2ms, application-code: 178ms)
+ GET /api/stats 500 in 179ms (next.js: 6ms, application-code: 173ms)
+[browser] Failed to load DevTrack data: SyntaxError: Failed to execute 'json' on 'Response': Unexpected end of JSON input
+    at Home.useEffect (src/app/page.tsx:30:44)
+  28 |   useEffect(() => {
+  29 |     Promise.all([
+> 30 |       fetch("/api/projects").then((r) => r.json()),
+     |                                            ^
+  31 |       fetch("/api/categories").then((r) => r.json()),
+  32 |       fetch("/api/wards").then((r) => r.json()),
+  33 |       fetch("/api/officials").then((r) => r.json()), (src/app/page.tsx:47:15)

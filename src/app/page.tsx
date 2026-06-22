@@ -1,106 +1,102 @@
-import Image from "next/image";
-import TypingAnimation from "@/components/magicui/typing-animation";
-import NavBar from "./components/navbar/navBar";
-import BoxReveal from "@/components/magicui/box-reveal";
-import { BoxRevealComponent } from "./components/boxReveal/boxReveal";
-import { Globe } from "@/components/ui/globe";
-import { GlobeComponent } from "./components/globe/globe";
-import GridPattern from "@/components/magicui/animated-grid-pattern";
-import RetroGrid from "@/components/magicui/retro-grid";
+"use client";
+
+import { useEffect, useState, useCallback } from "react";
+import { AppShell } from "@/components/devtrack/AppShell";
+import { HomeView } from "@/components/devtrack/HomeView";
+import { ProjectsView } from "@/components/devtrack/ProjectsView";
+import { ProjectDetailView } from "@/components/devtrack/ProjectDetailView";
+import { ForumView } from "@/components/devtrack/ForumView";
+import { OfficialsView } from "@/components/devtrack/OfficialsView";
+import { DashboardView } from "@/components/devtrack/DashboardView";
+import { BetaView } from "@/components/devtrack/BetaView";
+import { AboutView } from "@/components/devtrack/AboutView";
+import type { Project, Category, Ward, Official, ForumThread, BetaFeedback } from "@/lib/types";
+
 export default function Home() {
+  const [active, setActive] = useState("home");
+  const [payload, setPayload] = useState<any>(null);
+
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [wards, setWards] = useState<Ward[]>([]);
+  const [officials, setOfficials] = useState<Official[]>([]);
+  const [threads, setThreads] = useState<ForumThread[]>([]);
+  const [beta, setBeta] = useState<BetaFeedback[]>([]);
+  const [stats, setStats] = useState<any>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    Promise.all([
+      fetch("/api/projects").then((r) => r.json()),
+      fetch("/api/categories").then((r) => r.json()),
+      fetch("/api/wards").then((r) => r.json()),
+      fetch("/api/officials").then((r) => r.json()),
+      fetch("/api/forum/threads").then((r) => r.json()),
+      fetch("/api/beta").then((r) => r.json()),
+      fetch("/api/stats").then((r) => r.json()),
+    ]).then(([p, c, w, o, t, b, s]) => {
+      setProjects(p.projects || []);
+      setCategories(c.categories || []);
+      setWards(w.wards || []);
+      setOfficials(o.officials || []);
+      setThreads(t.threads || []);
+      setBeta(b.feedback || []);
+      setStats(s);
+      setLoaded(true);
+    }).catch((err) => {
+      console.error("Failed to load DevTrack data:", err);
+      setLoaded(true);
+    });
+  }, []);
+
+  const onNavigate = useCallback((tab: string, p?: any) => {
+    setActive(tab);
+    setPayload(p || null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
-    <main
-      style={{
-        flex: 1,
-        width: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          top: 20,
-          position: "absolute",
-
-          flex: 1,
-          display: "flex",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "50%",
-          borderTop: "1px solid #eaeaea",
-
-          alignContent: "center",
-        }}
-      >
-        <div
-          style={{
-            borderTop: "2px solid #eaeaea",
-            width: "70%",
-            borderWidth: 2,
-            height: 50,
-            borderRadius: "50%",
-            display: "flex",
-            alignSelf: "center",
-            justifyContent: "center",
-            alignContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {" "}
-          <NavBar />
-        </div>{" "}
-      </div>
-      <div
-        style={{
-          height: "100%",
-
-          width: "100%",
-        }}
-      >
-        {/* <GridPattern /> */}
-        <RetroGrid />
-
-        <div
-          style={{
-            alignSelf: "center",
-            justifyContent: "center",
-            alignContent: "center",
-            alignItems: "center",
-            flex: 1,
-            height: "100%",
-
-            display: "flex",
-            flexDirection: "row",
-            backgroundColor: "white",
-          }}
-        >
-          {" "}
-          <div
-            className="flex  justify-center "
-            style={{
-              alignItems: "center",
-              // marginBottom: 50,
-
-              // backgroundColor: "red",
-              // marginLeft: 40,
-
-              flex: 0.5,
-            }}
-          >
-            {" "}
-            <BoxRevealComponent />
-          </div>
-          <div
-            style={{
-              flex: 0.4,
-              justifyContent: "flex-end",
-            }}
-          >
-            <GlobeComponent />
+    <AppShell active={active} onNavigate={onNavigate}>
+      {!loaded ? (
+        <div className="min-h-[60vh] flex items-center justify-center">
+          <div className="text-center">
+            <div className="size-12 mx-auto mb-4 rounded-full border-2 border-emerald-glow/30 border-t-emerald-glow animate-spin" />
+            <p className="text-sm font-mono text-emerald-bright uppercase tracking-widest">{"// Loading DevTrack…"}</p>
           </div>
         </div>
-      </div>
-    </main>
+      ) : (
+        <>
+          {active === "home" && (
+            <HomeView projects={projects} threads={threads} stats={stats} onNavigate={onNavigate} />
+          )}
+          {active === "projects" && (
+            <ProjectsView
+              projects={projects}
+              categories={categories}
+              wards={wards}
+              initialCategoryId={payload?.categoryId}
+              onOpenProject={(slug) => onNavigate("project", { slug })}
+            />
+          )}
+          {active === "project" && payload?.slug && (
+            <ProjectDetailView
+              slug={payload.slug}
+              onBack={() => onNavigate("projects")}
+              onOpenProject={(slug) => onNavigate("project", { slug })}
+              onNavigate={onNavigate}
+            />
+          )}
+          {active === "forum" && (
+            <ForumView projectId={payload?.projectId} initialThreads={threads} />
+          )}
+          {active === "officials" && <OfficialsView officials={officials} />}
+          {active === "dashboard" && (
+            <DashboardView projects={projects} onOpenProject={(slug) => onNavigate("project", { slug })} onNavigate={onNavigate} />
+          )}
+          {active === "beta" && <BetaView initial={beta} />}
+          {active === "about" && <AboutView />}
+        </>
+      )}
+    </AppShell>
   );
 }

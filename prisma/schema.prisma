@@ -1,0 +1,245 @@
+// DevTrack — Mission-driven transparency platform for Kathmandu Metropolitan City
+// Prisma schema (SQLite for dev)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Users & Roles ----------
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String
+  passwordHash  String
+  role          String   @default("CITIZEN") // CITIZEN | EXPERT | OFFICIAL | ADMIN
+  expertise     String?  // e.g. "Civil Engineer, PhD Urban Planning" (for EXPERT)
+  wardId        String?  // home ward
+  bio           String?
+  avatarColor   String   @default("#DC143C")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  ward              Ward?               @relation(fields: [wardId], references: [id])
+  comments          Comment[]
+  threads           ForumThread[]
+  votes             Vote[]
+  notifications     Notification[]
+  betaFeedback      BetaFeedback[]
+  trackedProjects   TrackedProject[]
+  expertApplications ExpertApplication[]
+  projectUpdates    ProjectUpdate[]
+}
+
+model TrackedProject {
+  id        String   @id @default(cuid())
+  userId    String
+  projectId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+}
+
+// ---------- Wards ----------
+model Ward {
+  id        String  @id @default(cuid())
+  number    Int     @unique // 1..32
+  name      String
+  district  String  @default("Kathmandu")
+  population Int    @default(0)
+  area      Float   @default(0) // sq km
+  latitude  Float
+  longitude Float
+
+  users     User[]
+  projects  Project[]
+  officials Official[]
+}
+
+// ---------- Categories ----------
+model Category {
+  id          String @id @default(cuid())
+  slug        String @unique // infrastructure, education, healthcare, economy, environment, policy, urban_development, citizen_benefits
+  name        String
+  description String
+  icon        String
+  color       String // hex
+
+  projects Project[]
+}
+
+// ---------- Projects ----------
+model Project {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  summary       String
+  description   String
+  categoryId    String
+  wardId        String?
+  status        String   @default("PLANNED") // PLANNED | ONGOING | DELAYED | COMPLETED | STALLED
+  priority      String   @default("MEDIUM") // LOW | MEDIUM | HIGH | CRITICAL
+  budgetAllocated Float  // NPR
+  budgetSpent   Float    @default(0)
+  progress      Int      @default(0) // 0..100
+  startDate     DateTime?
+  endDatePlanned DateTime?
+  endDateActual  DateTime?
+  contractor    String?
+  consultant    String?
+  fundingSource String?  // KMC | Federal | Donor | PPP
+  latitude      Float?
+  longitude     Float?
+  coverImage    String?  // url
+  featured      Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  category      Category       @relation(fields: [categoryId], references: [id])
+  ward          Ward?          @relation(fields: [wardId], references: [id])
+  milestones    Milestone[]
+  budgetLines   BudgetLine[]
+  updates       ProjectUpdate[]
+  threads       ForumThread[]
+  trackedBy     TrackedProject[]
+}
+
+model Milestone {
+  id          String    @id @default(cuid())
+  projectId   String
+  title       String
+  description String?
+  dueDate     DateTime
+  completedAt DateTime?
+  status      String    @default("PENDING") // PENDING | DONE | OVERDUE
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model BudgetLine {
+  id        String  @id @default(cuid())
+  projectId String
+  label     String  // e.g. "Materials", "Labor", "Equipment", "Overhead"
+  amount    Float
+  spent     Float   @default(0)
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model ProjectUpdate {
+  id        String   @id @default(cuid())
+  projectId String
+  authorId  String?
+  title     String
+  body      String
+  type      String   @default("PROGRESS") // PROGRESS | BUDGET | DELAY | COMPLETION | ISSUE
+  createdAt DateTime @default(now())
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  author  User?   @relation(fields: [authorId], references: [id])
+}
+
+// ---------- Officials ----------
+model Official {
+  id            String   @id @default(cuid())
+  name          String
+  title         String   // Mayor | Deputy Mayor | Ward Chair | Committee Member
+  portfolio     String
+  wardId        String?
+  party         String?
+  phone         String
+  email         String
+  officeAddress String
+  surgeryHours  String   // public meeting hours
+  socials       String?  // comma-separated
+  photoColor    String   @default("#003893")
+  termStart     DateTime
+  termEnd       DateTime?
+  createdAt     DateTime @default(now())
+
+  ward        Ward?    @relation(fields: [wardId], references: [id])
+}
+
+// ---------- Forum ----------
+model ForumThread {
+  id        String   @id @default(cuid())
+  projectId String?
+  title     String
+  body      String
+  authorId  String
+  pinned    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  project  Project?  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  author   User      @relation(fields: [authorId], references: [id])
+  comments Comment[]
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  threadId  String
+  parentId  String?  // for threaded replies
+  authorId  String
+  body      String
+  isOfficial Boolean @default(false)
+  createdAt DateTime @default(now())
+
+  thread  ForumThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  author  User        @relation(fields: [authorId], references: [id])
+  votes   Vote[]
+}
+
+model Vote {
+  id        String @id @default(cuid())
+  commentId String?
+  userId    String
+  value     Int    // +1 or -1
+
+  comment Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ---------- Notifications ----------
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  body      String
+  link      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ---------- Beta Feedback ----------
+model BetaFeedback {
+  id        String   @id @default(cuid())
+  userId    String?
+  authorName String
+  category  String   // BUG | FEATURE | PRAISE | IDEA
+  body      String
+  rating    Int      @default(5) // 1..5
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+}
+
+// ---------- Expert Applications ----------
+model ExpertApplication {
+  id        String   @id @default(cuid())
+  userId    String
+  expertise String
+  credentials String
+  status    String   @default("PENDING") // PENDING | APPROVED | REJECTED
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
